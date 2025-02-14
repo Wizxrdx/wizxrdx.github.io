@@ -1,27 +1,21 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import Navbar from './components/Navbar.vue'
-
-type Project = {
-  id: number;
-  name: string;
-  description: string;
-}
 
 const name = ref('Benedick Labbao')
 const title = ref('A Programmer and Aspring Software Engineer')
 const about = ref('Brief introduction about yourself and what you do.')
-const email = ref('benedick.dumol@gmail.com')
+// const email = ref('benedick.dumol@gmail.com')
 
-const projects = ref<Project[]>([
-  { id: 1, name: 'Project 1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam.'
-   },
-  { id: 2, name: 'Project 2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam.' }
-])
+// const projects = ref<Project[]>([
+//   { id: 1, name: 'Project 1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam.'
+//    },
+//   { id: 2, name: 'Project 2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam.' }
+// ])
 
 
 
-const spawnNumbers = (initialCount, totalCount, interval) => {
+const spawnNumbers = (initialCount: number, totalCount: number, interval: number) => {
   let spawned = 0;
 
   // Initial spawn
@@ -48,7 +42,7 @@ const spawnNumbers = (initialCount, totalCount, interval) => {
   }, interval);
 };
 
-const createBinary = (container) => {
+const createBinary = (container: HTMLElement) => {
   const neuron = document.createElement('div');
   neuron.classList.add('binary');
   neuron.textContent = `${Math.round(Math.random())}`;
