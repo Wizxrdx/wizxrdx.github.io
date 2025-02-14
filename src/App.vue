@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import Navbar from './components/Navbar.vue'
 
 type Project = {
   id: number;
@@ -8,7 +9,7 @@ type Project = {
 }
 
 const name = ref('Benedick Labbao')
-const title = ref('A Programmer and Aspring Engineer')
+const title = ref('A Programmer and Aspring Software Engineer')
 const about = ref('Brief introduction about yourself and what you do.')
 const email = ref('benedick.dumol@gmail.com')
 
@@ -71,11 +72,13 @@ onMounted(() => {
 
 <template>
   <div id='app'>
+    <Navbar />
     <section id="hero">
       <div id="neuron-container"></div>
       <div class="overlay">
         <h1>{{ name }}</h1>
         <p>{{ title }}</p>
+        <p>{{ about }}</p>
       </div>
     </section>
         
@@ -109,6 +112,7 @@ onMounted(() => {
   #app {
       padding: 0;
       margin: 0 auto;
+      cursor: default;
   }
 
   #hero {
