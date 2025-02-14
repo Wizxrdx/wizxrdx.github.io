@@ -1,20 +1,24 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 type Project = {
   id: number;
   name: string;
   description: string;
 }
+
 const name = ref('Benedick Labbao')
 const title = ref('A Programmer and Aspring Engineer')
 const about = ref('Brief introduction about yourself and what you do.')
 const email = ref('benedick.dumol@gmail.com')
 
 const projects = ref<Project[]>([
-  { id: 1, name: 'Project 1', description: 'Description of project 1' },
-  { id: 2, name: 'Project 2', description: 'Description of project 2' }
+  { id: 1, name: 'Project 1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam.'
+   },
+  { id: 2, name: 'Project 2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam.' }
 ])
+
+
 
 const spawnNumbers = (initialCount, totalCount, interval) => {
   let spawned = 0;
@@ -62,15 +66,7 @@ const createBinary = (container) => {
 
 onMounted(() => {
   spawnNumbers(300, 500, 50);
-  let firstScroll = true;
-
-  window.addEventListener('wheel', (event) => {
-    if (firstScroll) {
-      firstScroll = false; // Ensure it runs only once
-      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
-    }
-  });
-})
+});
 </script>
 
 <template>
@@ -83,7 +79,7 @@ onMounted(() => {
       </div>
     </section>
         
-    <section id='about'>
+    <!-- <section id='about'>
         <h2>About Me</h2>
         <p>{{ about }}</p>
     </section>
@@ -105,7 +101,7 @@ onMounted(() => {
     <footer>
         <p>&copy; 2025 Made with ❤️ by <a href="https://github.com/wizxrdx/" target="_blank">{{ name }}</a>
         </p>
-    </footer>
+    </footer> -->
   </div>
 </template>
 
