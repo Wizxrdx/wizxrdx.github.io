@@ -19,7 +19,7 @@ const projects = ref<Project[]>([
 const createNeurons = () => {
   const container = document.getElementById('neuron-container');
   if (!container) return;
-  for (let i = 0; i < 300; i++) {
+  for (let i = 0; i < 500; i++) {
     const neuron = document.createElement('div');
     neuron.classList.add('neuron');
     neuron.textContent = `${Math.round(Math.random())}`;
@@ -28,6 +28,7 @@ const createNeurons = () => {
     const rng = Math.random();
     neuron.style.animationDuration = `${15 - (rng * 10)}s`;
     neuron.style.fontSize = `${rng * 100}px`;
+    neuron.style.fontFamily = 'Courier New';
     neuron.style.opacity = `0`;
     container.appendChild(neuron);
   }
