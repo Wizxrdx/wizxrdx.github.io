@@ -26,7 +26,7 @@ const spawnNumbers = (initialCount, totalCount, interval) => {
 
   // Initial spawn
   for (let i = 0; i < initialCount; i++) {
-    const container = document.getElementById('neuron-container');
+    const container = document.getElementById('binary-container');
     if (!container) continue;
 
     createBinary(container);
@@ -35,7 +35,7 @@ const spawnNumbers = (initialCount, totalCount, interval) => {
   
   // Spawn the rest
   const intervalId = setInterval(() => {
-    const container = document.getElementById('neuron-container');
+    const container = document.getElementById('binary-container');
     if (!container) return;
 
     if (spawned >= totalCount) {
@@ -50,7 +50,7 @@ const spawnNumbers = (initialCount, totalCount, interval) => {
 
 const createBinary = (container) => {
   const neuron = document.createElement('div');
-  neuron.classList.add('neuron');
+  neuron.classList.add('binary');
   neuron.textContent = `${Math.round(Math.random())}`;
   neuron.style.left = `${Math.round(Math.random() * 100)}vw`;
   neuron.style.top = `${Math.random() * 200}vh`;
@@ -74,7 +74,7 @@ onMounted(() => {
   <div id='app'>
     <Navbar />
     <section id="hero">
-      <div id="neuron-container"></div>
+      <div id="binary-container"></div>
       <div class="overlay">
         <h1>{{ name }}</h1>
         <p>{{ title }}</p>
@@ -133,7 +133,7 @@ onMounted(() => {
 </style>
 
 <style>
-#neuron-container {
+#binary-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -143,15 +143,19 @@ onMounted(() => {
     z-index: -1;
   }
 
-  .neuron {
+  .binary {
     position: absolute;
     width: 30px;
     height: 30px;
     color: #16F529;
-    animation: floatNeurons linear infinite;
+    animation: floatNumbers linear infinite;
   }
 
-  @keyframes floatNeurons {
+  .binary:hover {
+    background-color: #FFF;
+  }
+
+  @keyframes floatNumbers {
     0% {
       transform: translateY(0);
       opacity: 0;
