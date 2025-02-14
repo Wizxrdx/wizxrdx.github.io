@@ -7,7 +7,7 @@ type Project = {
   description: string;
 }
 const name = ref('Benedick Labbao')
-const title = ref('Programmer')
+const title = ref('A Programmer and Aspring Engineer')
 const about = ref('Brief introduction about yourself and what you do.')
 const email = ref('benedick.dumol@gmail.com')
 
@@ -16,26 +16,60 @@ const projects = ref<Project[]>([
   { id: 2, name: 'Project 2', description: 'Description of project 2' }
 ])
 
-const createNeurons = () => {
-  const container = document.getElementById('neuron-container');
-  if (!container) return;
-  for (let i = 0; i < 500; i++) {
-    const neuron = document.createElement('div');
-    neuron.classList.add('neuron');
-    neuron.textContent = `${Math.round(Math.random())}`;
-    neuron.style.left = `${Math.round(Math.random() * 100)}vw`;
-    neuron.style.top = `${Math.random() * 100}vh`;
-    const rng = Math.random();
-    neuron.style.animationDuration = `${15 - (rng * 10)}s`;
-    neuron.style.fontSize = `${rng * 100}px`;
-    neuron.style.fontFamily = 'Courier New';
-    neuron.style.opacity = `0`;
-    container.appendChild(neuron);
+const spawnNumbers = (initialCount, totalCount, interval) => {
+  let spawned = 0;
+
+  // Initial spawn
+  for (let i = 0; i < initialCount; i++) {
+    const container = document.getElementById('neuron-container');
+    if (!container) continue;
+
+    createBinary(container);
+    spawned++;
   }
+  
+  // Spawn the rest
+  const intervalId = setInterval(() => {
+    const container = document.getElementById('neuron-container');
+    if (!container) return;
+
+    if (spawned >= totalCount) {
+      clearInterval(intervalId);
+      return;
+    }
+    
+    createBinary(container);
+    spawned++;
+  }, interval);
 };
 
+const createBinary = (container) => {
+  const neuron = document.createElement('div');
+  neuron.classList.add('neuron');
+  neuron.textContent = `${Math.round(Math.random())}`;
+  neuron.style.left = `${Math.round(Math.random() * 100)}vw`;
+  neuron.style.top = `${Math.random() * 200}vh`;
+
+  const rng = Math.random();
+  neuron.style.animationDuration = `${15 - (rng * 10)}s`;
+  neuron.style.fontSize = `${(rng * 50) + 10}px`;
+  neuron.style.fontFamily = 'Courier New';
+  neuron.style.opacity = `0`;
+
+  container.appendChild(neuron);
+}
+
+
 onMounted(() => {
-  createNeurons();
+  spawnNumbers(300, 500, 50);
+  let firstScroll = true;
+
+  window.addEventListener('wheel', (event) => {
+    if (firstScroll) {
+      firstScroll = false; // Ensure it runs only once
+      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    }
+  });
 })
 </script>
 
@@ -122,9 +156,12 @@ onMounted(() => {
       transform: translateY(0);
       opacity: 0;
     }
+    50% {
+      opacity: 1;
+    }
     100% {
       transform: translateY(-100vh);
-      opacity: 1;
+      opacity: 0;
     }
   }
 </style>
