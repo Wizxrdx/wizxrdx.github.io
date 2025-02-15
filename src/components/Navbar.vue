@@ -23,6 +23,7 @@
   padding: 10px 0;
   text-align: center;
   z-index: 1000;
+  align-content: center;
 }
 
 #navbar ul {
@@ -31,6 +32,7 @@
   padding: 0;
   display: flex;
   justify-content: center;
+  justify-content: space-evenly;
 }
 
 #navbar li {

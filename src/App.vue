@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import Navbar from './components/Navbar.vue'
+import Matrix from './components/Matrix.vue'
+import ProfilePhoto from './components/ProfilePhoto.vue'
 
 const name = ref('Benedick Labbao')
 const title = ref('A Programmer and Aspring Software Engineer')
@@ -12,63 +14,14 @@ const about = ref('Brief introduction about yourself and what you do.')
 //    },
 //   { id: 2, name: 'Project 2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam.' }
 // ])
-
-
-
-const spawnNumbers = (initialCount: number, totalCount: number, interval: number) => {
-  let spawned = 0;
-
-  // Initial spawn
-  for (let i = 0; i < initialCount; i++) {
-    const container = document.getElementById('binary-container');
-    if (!container) continue;
-
-    createBinary(container);
-    spawned++;
-  }
-  
-  // Spawn the rest
-  const intervalId = setInterval(() => {
-    const container = document.getElementById('binary-container');
-    if (!container) return;
-
-    if (spawned >= totalCount) {
-      clearInterval(intervalId);
-      return;
-    }
-    
-    createBinary(container);
-    spawned++;
-  }, interval);
-};
-
-const createBinary = (container: HTMLElement) => {
-  const neuron = document.createElement('div');
-  neuron.classList.add('binary');
-  neuron.textContent = `${Math.round(Math.random())}`;
-  neuron.style.left = `${Math.round(Math.random() * 100)}vw`;
-  neuron.style.top = `${Math.random() * 200}vh`;
-
-  const rng = Math.random();
-  neuron.style.animationDuration = `${15 - (rng * 10)}s`;
-  neuron.style.fontSize = `${(rng * 50) + 10}px`;
-  neuron.style.fontFamily = 'Courier New';
-  neuron.style.opacity = `0`;
-
-  container.appendChild(neuron);
-}
-
-
-onMounted(() => {
-  spawnNumbers(300, 500, 50);
-});
 </script>
 
 <template>
   <div id='app'>
     <Navbar />
     <section id="hero">
-      <div id="binary-container"></div>
+      <Matrix />
+      <ProfilePhoto />
       <div class="overlay">
         <h1>{{ name }}</h1>
         <p>{{ title }}</p>
@@ -104,62 +57,32 @@ onMounted(() => {
 
 <style scoped>
   #app {
-      padding: 0;
       margin: 0 auto;
       cursor: default;
   }
 
   #hero {
-    height: 100vh;
+    top: 5vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
     position: relative;
+    flex-direction: column;
   }
 
   .overlay {
       background: rgba(0, 0, 0, 0.5);
-      padding: 20px;
+      padding: 0.5vw;
       border-radius: 10px;
-  }
-</style>
-
-<style>
-#binary-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: -1;
+      flex: 1 1 auto;
   }
 
-  .binary {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    color: #16F529;
-    animation: floatNumbers linear infinite;
+  @media (min-aspect-ratio: 1/1) {
+  #hero {
+    flex-direction: row;
   }
-
-  .binary:hover {
-    background-color: #FFF;
-  }
-
-  @keyframes floatNumbers {
-    0% {
-      transform: translateY(0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-100vh);
-      opacity: 0;
-    }
-  }
+}
 </style>
