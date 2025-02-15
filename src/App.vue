@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import Navbar from './components/Navbar.vue'
+import ProfilePhoto from './components/ProfilePhoto.vue'
 
 const name = ref('Benedick Labbao')
 const title = ref('A Programmer and Aspring Software Engineer')
@@ -69,6 +70,7 @@ onMounted(() => {
     <Navbar />
     <section id="hero">
       <div id="binary-container"></div>
+      <ProfilePhoto />
       <div class="overlay">
         <h1>{{ name }}</h1>
         <p>{{ title }}</p>
@@ -116,13 +118,21 @@ onMounted(() => {
     text-align: center;
     color: white;
     position: relative;
+    flex-direction: column;
   }
 
   .overlay {
       background: rgba(0, 0, 0, 0.5);
-      padding: 20px;
+      padding: 0.5vw;
       border-radius: 10px;
+      flex: 1 1 auto;
   }
+
+  @media (min-aspect-ratio: 1/1) {
+  #hero {
+    flex-direction: row;
+  }
+}
 </style>
 
 <style>
