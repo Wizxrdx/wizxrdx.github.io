@@ -133,6 +133,6 @@ onMounted(() => {
   @media (min-aspect-ratio: 1/1) {
   #hero {
     flex-direction: row;
-    }
   }
+}
 </style>
