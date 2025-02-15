@@ -46,7 +46,7 @@ const createBinary = (container: HTMLElement) => {
 
 onMounted(() => {
   const screenArea = window.innerWidth * window.innerHeight;
-  const baseDensity = 0.002;
+  const baseDensity = 0.001;
 
   const totalCount = Math.round(screenArea * baseDensity);
   const initialCount = Math.round(totalCount * 0.6);
