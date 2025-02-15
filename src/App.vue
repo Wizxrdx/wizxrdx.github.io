@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import Navbar from './components/Navbar.vue'
 import Matrix from './components/Matrix.vue'
 import ProfilePhoto from './components/ProfilePhoto.vue'
@@ -14,56 +14,6 @@ const about = ref('Brief introduction about yourself and what you do.')
 //    },
 //   { id: 2, name: 'Project 2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam. Nullam nec purus ac libero ultrices aliquam.' }
 // ])
-
-
-
-const spawnNumbers = (initialCount: number, totalCount: number, interval: number) => {
-  let spawned = 0;
-
-  // Initial spawn
-  for (let i = 0; i < initialCount; i++) {
-    const container = document.getElementById('binary-container');
-    if (!container) continue;
-
-    createBinary(container);
-    spawned++;
-  }
-  
-  // Spawn the rest
-  const intervalId = setInterval(() => {
-    const container = document.getElementById('binary-container');
-    if (!container) return;
-
-    if (spawned >= totalCount) {
-      clearInterval(intervalId);
-      return;
-    }
-    
-    createBinary(container);
-    spawned++;
-  }, interval);
-};
-
-const createBinary = (container: HTMLElement) => {
-  const neuron = document.createElement('div');
-  neuron.classList.add('binary');
-  neuron.textContent = `${Math.round(Math.random())}`;
-  neuron.style.left = `${Math.round(Math.random() * 100)}vw`;
-  neuron.style.top = `${Math.random() * 200}vh`;
-
-  const rng = Math.random();
-  neuron.style.animationDuration = `${15 - (rng * 10)}s`;
-  neuron.style.fontSize = `${(rng * 50) + 10}px`;
-  neuron.style.fontFamily = 'Courier New';
-  neuron.style.opacity = `0`;
-
-  container.appendChild(neuron);
-}
-
-
-onMounted(() => {
-  spawnNumbers(300, 500, 50);
-});
 </script>
 
 <template>
