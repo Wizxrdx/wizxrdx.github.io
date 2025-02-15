@@ -15,7 +15,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   padding: 5vw;
   flex: 7 7 auto;
 }
@@ -38,13 +37,5 @@
   object-fit: cover;
   filter: brightness(1);
   transition: filter 0.5s ease-in-out;
-}
-
-.profile-photo:hover {
-  box-shadow: 0 0 80px rgba(255, 255, 255, 0.1);
-}
-
-.profile-photo:hover img {
-  filter: brightness(1.2);
 }
 </style>
