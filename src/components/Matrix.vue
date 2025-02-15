@@ -45,7 +45,12 @@ const createBinary = (container: HTMLElement) => {
 }
 
 onMounted(() => {
-  spawnNumbers(300, 500, 50);
+  const screenArea = window.innerWidth * window.innerHeight;
+  const baseDensity = 0.002;
+
+  const totalCount = Math.round(screenArea * baseDensity);
+  const initialCount = Math.round(totalCount * 0.6);
+  spawnNumbers(initialCount, totalCount, 50);
 });
 </script>
 
