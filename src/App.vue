@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import Navbar from './components/Navbar.vue'
+import Matrix from './components/Matrix.vue'
 import ProfilePhoto from './components/ProfilePhoto.vue'
 
 const name = ref('Benedick Labbao')
@@ -69,7 +70,7 @@ onMounted(() => {
   <div id='app'>
     <Navbar />
     <section id="hero">
-      <div id="binary-container"></div>
+      <Matrix />
       <ProfilePhoto />
       <div class="overlay">
         <h1>{{ name }}</h1>
@@ -111,7 +112,8 @@ onMounted(() => {
   }
 
   #hero {
-    height: 100vh;
+    top: 5vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,44 +133,6 @@ onMounted(() => {
   @media (min-aspect-ratio: 1/1) {
   #hero {
     flex-direction: row;
-  }
-}
-</style>
-
-<style>
-#binary-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: -1;
-  }
-
-  .binary {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    color: #16F529;
-    animation: floatNumbers linear infinite;
-  }
-
-  .binary:hover {
-    background-color: #FFF;
-  }
-
-  @keyframes floatNumbers {
-    0% {
-      transform: translateY(0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-100vh);
-      opacity: 0;
     }
   }
 </style>
