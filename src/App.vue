@@ -104,7 +104,6 @@ onMounted(() => {
 
 <style scoped>
   #app {
-      padding: 0;
       margin: 0 auto;
       cursor: default;
   }
