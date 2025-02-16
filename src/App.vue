@@ -7,7 +7,7 @@ import ChangingText from './components/ChangingText.vue'
 
 const name = ref('Benedick Labbao')
 const titles = ref(['Computer Engineer', 'Software Engineer', 'Electronics Hobbyist', 'Programmer', 'Data Scientist', 'Web Developer'])
-const about = ref('Anything Tech-Related.')
+// const about = ref('Anything Tech-Related.')
 // const email = ref('benedick.dumol@gmail.com')
 
 // const projects = ref<Project[]>([
