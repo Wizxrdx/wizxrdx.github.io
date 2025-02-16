@@ -3,10 +3,11 @@ import { ref } from 'vue'
 import Navbar from './components/Navbar.vue'
 import Matrix from './components/Matrix.vue'
 import ProfilePhoto from './components/ProfilePhoto.vue'
+import ChangingText from './components/ChangingText.vue'
 
 const name = ref('Benedick Labbao')
-const title = ref('A Programmer and Aspring Software Engineer')
-const about = ref('Brief introduction about yourself and what you do.')
+const titles = ref(['Computer Engineer', 'Software Engineer', 'Electronics Hobbyist', 'Programmer', 'Data Scientist', 'Web Developer'])
+const about = ref('Anything Tech-Related.')
 // const email = ref('benedick.dumol@gmail.com')
 
 // const projects = ref<Project[]>([
@@ -24,8 +25,7 @@ const about = ref('Brief introduction about yourself and what you do.')
       <ProfilePhoto />
       <div class="overlay">
         <h1>{{ name }}</h1>
-        <p>{{ title }}</p>
-        <p>{{ about }}</p>
+        <ChangingText :titles="titles" />
       </div>
     </section>
         
@@ -62,27 +62,37 @@ const about = ref('Brief introduction about yourself and what you do.')
   }
 
   #hero {
-    top: 5vh;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    position: relative;
     flex-direction: column;
   }
 
   .overlay {
-      background: rgba(0, 0, 0, 0.5);
+      background: #000;
       padding: 0.5vw;
       border-radius: 10px;
-      flex: 1 1 auto;
+      width: 80vw;
   }
 
   @media (min-aspect-ratio: 1/1) {
   #hero {
     flex-direction: row;
   }
+
+  .overlay {
+    width: 40vw;
+  }
+}
+</style>
+<style scoped>
+  #about {
+    background: #000;
+    padding-top: 5vh;
+    height: 100vh;
+    text-align: center;
 }
 </style>

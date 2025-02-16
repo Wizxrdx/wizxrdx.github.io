@@ -17,7 +17,6 @@ import ProfilePic from '../assets/ben.jpg';
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 7 7 auto;
   top: 5vh;
 }
 
