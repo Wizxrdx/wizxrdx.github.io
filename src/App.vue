@@ -62,8 +62,7 @@ const about = ref('Anything Tech-Related.')
   }
 
   #hero {
-    top: 5vh;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,10 +72,10 @@ const about = ref('Anything Tech-Related.')
   }
 
   .overlay {
-      background: rgba(0, 0, 0, 0.5);
+      background: #000;
       padding: 0.5vw;
       border-radius: 10px;
-      flex: 1 1 auto;
+      width: 80vw;
   }
 
   @media (min-aspect-ratio: 1/1) {
