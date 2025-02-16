@@ -6,8 +6,8 @@ import ProfilePhoto from './components/ProfilePhoto.vue'
 import ChangingText from './components/ChangingText.vue'
 
 const name = ref('Benedick Labbao')
-const titles = ref(['Computer Engineer', 'Software Engineer', 'Electronics Hobbyist', 'Programmer', 'Data Scientist', 'Web Developer'])
-// const about = ref('Anything Tech-Related.')
+const titles = ref(['Computer Engineer', 'Software Engineer', 'Electronics Hobbyist', 'Programmer', 'Data Scientist', 'Web Developer', 'Gamer'])
+const skill = ref('Data Science | Deep Learning | Machine Learning | Web Development | Embedded Systems')
 // const email = ref('benedick.dumol@gmail.com')
 
 // const projects = ref<Project[]>([
@@ -29,29 +29,34 @@ const titles = ref(['Computer Engineer', 'Software Engineer', 'Electronics Hobby
       </div>
     </section>
         
-    <!-- <section id='about'>
+    <section id='about'>
         <h2>About Me</h2>
-        <p>{{ about }}</p>
+        <p>Currently studying Computer Engineering at Technological Institute of the Philippines - Quezon City</p>
+        <p>Fell in love with coding during high school (2017)</p>
+        <p>Passionate when it comes to latest technologies and innovations</p>
+        <h2>My Technical Skill Set</h2>
+        <p>{{ skill }}</p>
+        <p>Check out my <a href="https://github.com/Wizxrdx" target="_blank">GitHub Profile</a> for a more specific details.</p>
     </section>
     
-    <section id='projects'>
+    <!-- <section id='projects'>
         <h2>Projects</h2>
         <div v-for='project in projects' :key='project.id' class='project'>
             <h3>{{ project.name }}</h3>
             <p>{{ project.description }}</p>
         </div>
-    </section>
+    </section> -->
     
-    <section id='contact'>
+    <!-- <section id='contact'>
         <h2>Contact</h2>
         <p>Email: {{ email }}</p>
         <p>LinkedIn: </p>
-    </section>
+    </section> -->
     
     <footer>
         <p>&copy; 2025 Made with ❤️ by <a href="https://github.com/wizxrdx/" target="_blank">{{ name }}</a>
         </p>
-    </footer> -->
+    </footer>
   </div>
 </template>
 
@@ -88,11 +93,28 @@ const titles = ref(['Computer Engineer', 'Software Engineer', 'Electronics Hobby
   }
 }
 </style>
+
 <style scoped>
   #about {
     background: #000;
-    padding-top: 5vh;
-    height: 100vh;
+    padding-top: 10vh;
+    height: 90vh;
     text-align: center;
 }
+</style>
+
+<style scoped>
+  footer {
+    color: white;
+    text-align: center;
+    padding: 1vh;
+    justify-items: center;
+  }
+
+  footer p {
+    margin: 0;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #000;
+  }
 </style>
