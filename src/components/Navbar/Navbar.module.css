@@ -1,0 +1,26 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 0.5rem 1rem;
+}
+.navList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+.navItem {
+        margin: 0;
+}
+.navLink {
+    text-decoration: none;
+    color: #0070f3;
+    font-weight: bold;
+    font-size: 1rem;
+}
