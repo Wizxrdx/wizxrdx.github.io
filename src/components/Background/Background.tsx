@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from 'react';
+import styles from './Background.module.css';
 
 export default function Background() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -56,7 +57,7 @@ export default function Background() {
                 neurons.forEach((neuron) => {
                     ctx.beginPath();
                     ctx.arc(neuron.x, neuron.y, neuron.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = '#d3d3d3'; // Light gray color
+                    ctx.fillStyle = '#d3d3d3d3'; // Light gray color
                     ctx.fill();
 
                     // Update neuron position
@@ -75,6 +76,6 @@ export default function Background() {
         }
     }, []);
         return (
-        <canvas ref={canvasRef} style={{ position: 'absolute', top: 0, left: 0, zIndex: -1 }}></canvas>
+        <canvas ref={canvasRef} className={styles.canvas}></canvas>
     );
 }
