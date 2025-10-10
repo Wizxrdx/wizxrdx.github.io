@@ -1,23 +1,35 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: IBM Plex Sans, Newsreader, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 header {
   background-color: #333;
   color: white;
-  padding: 1rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
 }
 
-nav ul li a {
-  color: white;
+a {
+  color: gray;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #333;
 }
