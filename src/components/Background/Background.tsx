@@ -12,7 +12,10 @@ export default function Background() {
         if (canvas && ctx) {
             // Set canvas size
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            canvas.height = Math.max(
+                document.documentElement.scrollHeight, // Total height of the page
+                document.documentElement.clientHeight // Viewport height
+            );
             
             const area = canvas.width * canvas.height;
             const neurons: { x: number; y: number; radius: number; dx: number; dy: number; }[] = [];
