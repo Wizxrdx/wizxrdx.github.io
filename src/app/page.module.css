@@ -1,27 +1,62 @@
-.header {
-    background-color: #1a1a1a;
-    text-align: center;
-    padding-bottom: 1rem;
-}
-.headerTitle {
-    margin: 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.2rem;
-    font-size: 3rem;
-}
-.section {
-    margin-bottom: 2rem;
-}
-.sectionTitle {
-    font-size: 1.7rem;
-    color: #555;
+.container {
+    gap: 1.5rem;
+    padding: 0.5rem 2rem 2rem 2rem;
+    color: #333;
 }
 
-@media (max-width: 910px) {
+.header {
+    width: 100%;
+    text-align: left;
+}
+.headerTitle {
+    font-weight: normal;
+    font-size: 2.5rem;
+    margin: 0;
+    color: #222;
+}
+.headerBody {
+    font-size: 1.2rem;
+    color: #666;
+    margin-left: 0.5rem;
+}
+
+.section {
+    margin: 0 5rem 0 0;
+    align-items: center;
+}
+.sectionBody {
+    font-size: 1rem;
+    color: #444;
+}
+
+.profileImage {
+    margin: 0 0 0 1rem;
+    max-width: 200px;
+    width: 15vw;
+    object-fit: cover;
+    float: right;
+}
+
+@media (max-width: 768px) {
     .headerTitle {
+        text-align: center;
         font-size: 1.5rem;
     }
-    .sectionTitle {
-        font-size: 1.2rem;
+    .headerBody {
+        text-align: center;
+        font-size: 1rem;
+        margin: 0;
+    }
+    .section {
+        display: flex;
+        max-width: 800px;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profileImage {
+        margin: 0;
+        width: 30vw;
+        object-fit: cover;
     }
 }
