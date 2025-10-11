@@ -1,18 +1,27 @@
 .header {
+    background-color: #1a1a1a;
     text-align: center;
+    padding-bottom: 1rem;
+}
+.headerTitle {
+    margin: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem;
+    font-size: 3rem;
+}
+.section {
     margin-bottom: 2rem;
 }
-
-.header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-.header p {
-    font-size: 1.2rem;
+.sectionTitle {
+    font-size: 1.7rem;
     color: #555;
 }
 
-.section {
-    margin-bottom: 2rem;
+@media (max-width: 910px) {
+    .headerTitle {
+        font-size: 1.5rem;
+    }
+    .sectionTitle {
+        font-size: 1.2rem;
+    }
 }

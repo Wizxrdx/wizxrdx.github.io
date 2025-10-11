@@ -1,17 +1,16 @@
+html,
 body {
   font-family: IBM Plex Sans, Newsreader, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
   line-height: 1.8;
   font-weight: 300;
+  height: 100%;
 }
 
 section {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100vh;
 }
 
 header {
@@ -24,6 +23,12 @@ nav ul {
   display: flex;
 }
 
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the layout takes up the full height of the viewport */
+}
+
 a {
   color: gray;
   text-decoration: none;
@@ -32,4 +37,8 @@ a {
 
 a:hover {
   color: #333;
+}
+
+.content {
+  flex: 1; /* Push the footer to the bottom */
 }

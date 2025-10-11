@@ -1,20 +1,22 @@
-import Skills from "./skills/page"
+import TextWritingAnimation from '@/components/TextTypingAnimation/TextTypingAnimation';
 import styles from './page.module.css'
 
 export default function AboutPage() {
   return (
-    <main className={styles.main}>
-      <section id="about">
+    <main>
+      <section>
         <header className={styles.header}>
-          <h1 className={styles.title}>Hi, I'm Benedick Labbao</h1>
-          <p className={styles.subtitle}>Data Scientist | Machine Learning Enthusiast | Problem Solver</p>
+          <h1 className={styles.headerTitle}>Benedick Labbao</h1>
+          <TextWritingAnimation text={["Machine Learning Enthusiast", "Data Scientist", "Problem Solver"]} />
         </header>
 
-        <h2 className={styles.sectionTitle}>About Me</h2>
-        <p>
-        I'm a data scientist with a passion for uncovering insights from data. I specialize in machine learning, data
-        visualization, and statistical analysis. I enjoy solving complex problems and turning data into actionable insights.
-        </p>
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>About Me</h2>
+          <p>
+          I'm a data scientist with a passion for uncovering insights from data. I specialize in machine learning, data
+          visualization, and statistical analysis. I enjoy solving complex problems and turning data into actionable insights.
+          </p>
+        </section>
       </section>
     </main>
   );
