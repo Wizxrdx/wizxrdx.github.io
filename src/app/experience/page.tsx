@@ -1,6 +1,7 @@
 export default function ExperiencePage() {
     return (
         <section id="experience">
+            <title>Experience</title>
             <h2>Experience</h2>
             <ul>
                 <li>

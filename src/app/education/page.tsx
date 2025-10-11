@@ -1,6 +1,7 @@
 export default function EducationPage() {
     return (
         <section id="education">
+            <title>Education</title>
             <h2>Education</h2>
             <ul>
                 <li>

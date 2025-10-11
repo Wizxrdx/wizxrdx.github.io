@@ -1,6 +1,7 @@
 export default function ProjectsPage() {
     return (
         <section id="projects">
+            <title>Projects</title>
             <h2>Projects</h2>
             <ul>
                 <li>

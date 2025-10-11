@@ -1,6 +1,7 @@
 export default function SkillsPage() {
     return (
         <section id="skills">
+            <title>Skills</title>
             <h2>Skills</h2>
             <ul>
                 <li>Programming: Python, R, SQL</li>
