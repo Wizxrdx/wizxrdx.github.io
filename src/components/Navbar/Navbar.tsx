@@ -22,6 +22,11 @@ export default function Navbar() {
             </div>
             <ul className={`${styles.navList} ${isMenuOpen ? styles.navListOpen : ''}`}>
                 <li className={styles.navItem}>
+                    <Link href="/" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>
+                    Home
+                    </Link>
+                </li>
+                <li className={styles.navItem}>
                     <Link href="/projects" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>
                     Projects
                     </Link>
