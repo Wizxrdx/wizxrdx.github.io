@@ -1,37 +1,24 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquareGithub, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
 
-        {/* Navigation Links */}
-        <ul className={styles.navLinks}>
-          <li>
-            <Link href="/">About</Link>
-          </li>
-          <li>
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/education">Education</Link>
-          </li>
-          <li>
-            <Link href="/skills">Skills</Link>
-          </li>
-        </ul>
-
         {/* Social Media Links */}
         <div className={styles.socialLinks}>
           <Link href="https://github.com/Wizxrdx" target="_blank" rel="noopener noreferrer">
-            GitHub
+            <FontAwesomeIcon className={styles.icon} icon={faSquareGithub} />
           </Link>
           <Link href="https://linkedin.com/in/benlabbao" target="_blank" rel="noopener noreferrer">
-            LinkedIn
+            <FontAwesomeIcon className={styles.icon} icon={faLinkedin} />
           </Link>
           <Link href="https://twitter.com/benlabbao" target="_blank" rel="noopener noreferrer">
-            Twitter
+            <FontAwesomeIcon className={styles.icon} icon={faXTwitter} />
           </Link>
         </div>
 
