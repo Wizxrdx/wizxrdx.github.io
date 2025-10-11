@@ -4,10 +4,7 @@ export default function EducationPage() {
             <h2>Education</h2>
             <ul>
                 <li>
-                    <strong>Bachelor of Science in Computer Science</strong> - University of Example (2015-2019)
-                </li>
-                <li>
-                    <strong>Master of Science in Data Science</strong> - Institute of Data (2019-2021)
+                    <strong>Bachelor of Science in Computer Engineering</strong> - Technological Institute of the Philippines - Quezon City (2021-2025)
                 </li>
             </ul>
         </section>
