@@ -53,3 +53,10 @@ a {
     margin: 0;
   }
 }
+
+img {
+  margin-bottom: 1rem;
+  max-width: 200px;
+  width: 15vw;
+  object-fit: cover;
+}

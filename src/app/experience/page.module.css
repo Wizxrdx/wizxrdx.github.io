@@ -1,0 +1,106 @@
+.container {
+    gap: 1.5rem;
+    padding: 2rem 2rem 2rem 2rem;
+    color: #333;
+}
+
+.header {
+    width: 100%;
+    text-align: left;
+}
+.headerTitle {
+    font-weight: normal;
+    font-size: 2.5rem;
+    margin: 0;
+    color: #222;
+}
+.headerBody {
+    font-size: 1.2rem;
+    color: #666;
+    margin-left: 0.5rem;
+}
+
+.item {
+    margin: 1rem 0 1rem 0;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.itemHeader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    align-items: center;
+    align-content: stretch;
+}
+.itemHeader * {
+    margin: 0;
+    text-align: left;
+}
+.itemHeaderLogo {
+    max-width: 200px;
+    min-width: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.itemHeaderTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex-grow: 1;
+}
+.itemHeaderTags {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 0.2rem;
+}
+.itemHeaderTags h4 {
+    text-align: end;
+    margin: 0;
+    font-weight: normal;
+    font-size: 1rem;
+    color: #555;
+}
+.itemHeaderDate {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.itemBody {
+    margin-top: 1rem;
+    text-align: left;
+}
+.itemBodyTags span {
+    display: inline-block;
+    background: #eee;
+    color: #555;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin: 0.2rem 0.2rem 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .item {
+        padding: 2rem;
+    }
+    .itemHeader {
+        gap: 0.5rem;
+    }
+    .itemHeaderTags {
+        margin: 0 1rem;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex-direction: row;
+    }
+    .itemHeaderTags h4 {
+        text-align: left;
+    }
+}
