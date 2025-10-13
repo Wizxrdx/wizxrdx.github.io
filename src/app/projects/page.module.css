@@ -10,12 +10,10 @@
 }
 .headerTitle {
     font-weight: normal;
-    font-size: 2.5rem;
     margin: 0;
     color: #222;
 }
 .headerBody {
-    font-size: 1.2rem;
     color: #666;
     margin: 0;
     margin-left: 0.5rem;
@@ -34,10 +32,9 @@
     overflow: hidden;
     align-items: stretch;
     transition: transform 0.3s ease, background-color 0.3s ease;
-
     &:hover {
         transform: translateY(-0.3rem);
-        background-color: #f9f9f9;
+        background-color: rgba(249, 249, 249, 1);
     }
 }
 .itemImagePreview {
@@ -66,15 +63,12 @@
     width: 100%;
     text-align: left;
     margin: 0;
-    font-size: 1.5rem;
     color: #222;
 }
 .itemDesc {
     width: 100%;
     text-align: left;
     margin: 0.5rem 0 0.5rem 0;
-    color: #222;
-    font-size: 1rem;
     flex-grow: 1;
 }
 .itemTags {
@@ -84,7 +78,7 @@
     gap: 0.5rem;
 }
 .itemTags * {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     background-color: #eee;
     padding: 0.2rem 0.5rem;
     border-radius: 0.3rem;
@@ -101,7 +95,7 @@
     
 }
 .itemFeatures ul {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #555;
     margin: 0;
     padding: 0 0 0 1.2rem;
@@ -116,7 +110,6 @@
 }
 .itemButton a {
     font-family: 'IBMPlexSans', sans-serif;
-    font-size: 0.9rem;
     padding: 0.1rem 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -152,5 +145,30 @@
     color: black;
     &:hover {
         background-color: #d1bb3d;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem 1rem 1rem 1rem;
+        gap: 1rem;
+    }
+    .headerTitle {
+        text-align: center;
+    }
+    .headerBody {
+        text-align: center;
+        margin-left: 0;
+    }
+    .itemContainer {
+        margin: 1rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .itemVideoPreview {
+        height: 200px;
+    }
+    .itemImagePreview {
+        height: 150px;
     }
 }
