@@ -89,6 +89,13 @@
 }
 
 @media (max-width: 768px) {
+    .headerTitle {
+        text-align: center;
+    }
+    .headerBody {
+        text-align: center;
+        margin: 0;
+    }
     .itemHeader {
         gap: 0.5rem;
     }
