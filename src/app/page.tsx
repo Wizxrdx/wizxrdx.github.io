@@ -2,6 +2,7 @@ import TextWritingAnimation from '@/components/TextTypingAnimation/TextTypingAni
 import styles from './page.module.css'
 import Link from 'next/link';
 import SlidingPicture from '@/components/SlidingPicture/SlidingPicture';
+import Image from 'next/image';
 
 export default function AboutPage() {
   return (
@@ -16,7 +17,7 @@ export default function AboutPage() {
 
       <article className={styles.section}>
         <div className={styles.profile}>
-        <img className={styles.profileImage} src="/profile.png" alt="Wizxrdx" />
+        <Image className={styles.profileImage} src="/profile.png" alt="Wizxrdx" />
         <div className={`${styles.profileContents} ${'glass-card'}`}>
           <Link href='mailto:benedick.dumol@gmail.com'>
             benedick.dumol@gmail.com
@@ -36,7 +37,7 @@ export default function AboutPage() {
         </div>
         </div>
         <p className={styles.sectionBody}>
-          Hello! I'm <b>Benedick Labbao</b>, an aspiring <b>Machine Learning Engineer</b> and <b>Full-Stack Developer</b>.
+          Hello! I&apos;m <b>Benedick Labbao</b>, an aspiring <b>Machine Learning Engineer</b> and <b>Full-Stack Developer</b>.
           I am a <b>Computer Engineering</b> undergraduate at the <b>Technological Institute of the Philippines - Quezon City</b>,
           with a track elective in <b>Data Science</b>. I focus on <b>AI systems</b>, <b>data processing</b>, and <b>end-to-end application development</b>.
         </p>
