@@ -10,12 +10,11 @@
 }
 .headerTitle {
     font-weight: normal;
-    font-size: 2.5rem;
     margin: 0;
     color: #222;
 }
 .headerBody {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #666;
     margin-left: 0.5rem;
 }
@@ -23,18 +22,48 @@
 .section {
     margin: 0 5rem 0 0;
     align-items: center;
+    overflow: hidden;
 }
 .sectionBody {
-    font-size: 1rem;
     color: #444;
 }
 
-.profileImage {
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: right;
     margin: 0 0 0 1rem;
-    max-width: 200px;
+}
+.profileImage {
+    margin-bottom: 1rem;
+    max-width: 150px;
     width: 15vw;
     object-fit: cover;
-    float: right;
+}
+.profileContents {
+    max-width: 15em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.profileContents * {
+    color: #555;
+    text-align: center;
+    margin: 0.3rem 0.5rem 0.3rem 0.5rem;
+}
+.profileContents *:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.feature {
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -54,9 +83,17 @@
         flex-direction: column;
         align-items: center;
     }
+    .profile {
+        margin: 0;
+    }
     .profileImage {
         margin: 0;
         width: 30vw;
         object-fit: cover;
+    }
+
+    .feature {
+        padding: 1rem;
+        width: 90%;
     }
 }

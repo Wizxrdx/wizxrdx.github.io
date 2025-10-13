@@ -7,6 +7,17 @@ body {
   height: 100%;
 }
 
+.glass-card {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  color: #000; /* Text color */
+  text-align: center; /* Center-align text */
+}
+
 section {
   margin: 0;
   padding: 0;
@@ -23,6 +34,7 @@ nav ul {
 }
 
 a {
+  font-size: 0.7rem;
   color: gray;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -31,8 +43,62 @@ a {
 .content {
   flex: 1; /* Push the footer to the bottom */
   max-width: 1080px;
-  margin: 0 auto;
+  margin: 2rem auto;
   width: 100%;
+}
+
+img {
+  margin-bottom: 1rem;
+  max-width: 200px;
+  width: 15vw;
+  object-fit: cover;
+}
+
+p {
+  font-size: 0.8rem;
+  color: #444;
+}
+
+span {
+  font-size: 0.8rem;
+  color: #444;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+ul {
+    margin: 0;
+    padding: 0 0 0 1.2rem;
+
+    &::marker {
+        color: #888;
+        margin: 0;
+    }
+}
+
+li {
+  font-size: 0.8rem;
+  color: #555;
 }
 
 @media (max-width: 768px) {
