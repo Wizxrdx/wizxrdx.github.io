@@ -2,7 +2,6 @@ import TextWritingAnimation from '@/components/TextTypingAnimation/TextTypingAni
 import styles from './page.module.css'
 import Link from 'next/link';
 import SlidingPicture from '@/components/SlidingPicture/SlidingPicture';
-import Image from 'next/image';
 
 export default function AboutPage() {
   return (
@@ -17,7 +16,7 @@ export default function AboutPage() {
 
       <article className={styles.section}>
         <div className={styles.profile}>
-        <Image className={styles.profileImage} src="/profile.png" alt="Wizxrdx" />
+        <img className={styles.profileImage} src="/profile.png" alt="Wizxrdx" />
         <div className={`${styles.profileContents} ${'glass-card'}`}>
           <Link href='mailto:benedick.dumol@gmail.com'>
             benedick.dumol@gmail.com
