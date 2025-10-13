@@ -22,6 +22,7 @@
 .section {
     margin: 0 5rem 0 0;
     align-items: center;
+    overflow: hidden;
 }
 .sectionBody {
     color: #444;
@@ -56,6 +57,15 @@
     text-decoration: underline;
 }
 
+.feature {
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
 @media (max-width: 768px) {
     .headerTitle {
         text-align: center;
@@ -80,5 +90,10 @@
         margin: 0;
         width: 30vw;
         object-fit: cover;
+    }
+
+    .feature {
+        padding: 1rem;
+        width: 90%;
     }
 }

@@ -1,0 +1,56 @@
+.buttonContainer {
+    margin: 0.5rem 0;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.code {
+    font-family: 'IBMPlexSans', sans-serif;
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 3px solid #555;
+    background-color: #222;
+    color: white;
+    &:hover {
+        background-color: #444;
+    }
+}
+.youtube {
+    font-family: 'IBMPlexSans', sans-serif;
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 3px solid #dd433e;
+    background-color: #c4302b;
+    color: white;
+    &:hover {
+        background-color: #e53935;
+    }
+}
+.visit {
+    font-family: 'IBMPlexSans', sans-serif;
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 3px solid #2880d3;
+    background-color: #2c6ba5;
+    color: white;
+    &:hover {
+        background-color: rgb(33, 82, 122);
+    }
+}
+.paper {
+    font-family: 'IBMPlexSans', sans-serif;
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 3px solid #f5d625;
+    background-color: #ffe449;
+    color: black;
+    &:hover {
+        background-color: #d1bb3d;
+    }
+}
