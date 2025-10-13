@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquareGithub, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faSquareGithub, faLinkedin, faXTwitter, faKaggle } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
   return (
@@ -20,8 +20,10 @@ export default function Footer() {
           <Link href="https://twitter.com/benlabbao" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className={styles.icon} icon={faXTwitter} />
           </Link>
+          <Link href="https://www.kaggle.com/benedicklabbao" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon className={styles.icon} icon={faKaggle} />
+          </Link>
         </div>
-
         {/* Footer Name or Branding */}
         <p className={styles.branding}>© {new Date().getFullYear()} Made with ❤️ by Wizxrdx</p>
       </div>
