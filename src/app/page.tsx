@@ -9,7 +9,7 @@ export default function AboutPage() {
       <div className={styles.header}>
         <h1 className={styles.headerTitle}>Benedick Labbao</h1>
         <div className={styles.headerBody}>
-          <TextWritingAnimation text={["Machine Learning Enthusiast", "Data Scientist", "Problem Solver"]} /> 
+          <TextWritingAnimation text={["ML Engineer", "Data Scientist", "Problem Solver", "Computer Engineer"]} /> 
         </div>
       </div>
 
@@ -25,6 +25,12 @@ export default function AboutPage() {
           </Link>
           <Link href='https://www.linkedin.com/in/benedick-labbao/' target='_blank' rel='noopener noreferrer'>
             LinkedIn
+          </Link>
+          <Link href='https://www.kaggle.com/benedicklabbao' target='_blank' rel='noopener noreferrer'>
+            Kaggle
+          </Link>
+          <Link href='https://twitter.com/benlabbao' target='_blank' rel='noopener noreferrer'>
+            X (Twitter)
           </Link>
         </div>
         </div>
