@@ -112,6 +112,36 @@ export default function ProjectsPage() {
                 </div>
 
                 <div className={`${styles.item} ${'glass-card'}`}>
+                    <iframe className={styles.itemVideoPreview} src="https://www.youtube.com/embed/PGDNyjjESfA" title='Hybrid Exoplanet Recognition and Model Evaluation System'></iframe>
+                    <div className={styles.itemContent}>
+                        <h4 className={styles.itemTitle} >Automated Remote Geospatial User Service - ARGUS</h4>
+                        <p className={styles.itemDesc}>ARGUS is a Web platform for <strong>NASA Space Apps Challenge 2024</strong>, that allows users to view multispectral satellite images and check future satellite pass schedules by entering latitude and longitude coordinates, providing interactive map-based visualizations and scheduling information via APIs.</p>
+                        <div className={styles.itemTags}>
+                            <span>Web Application</span>
+                            <span>Mapping & Visualization</span>
+                            <span>Satellite Data Processing</span>
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Leaflet.js</span>
+                            <span>Folium</span>
+                        </div>
+                        <div className={styles.itemFeatures}>
+                            <h4>Features:</h4>
+                        <ul>
+                            <li>Interactive map-based display of multispectral satellite imagery</li>
+                            <li>Satellite pass prediction using real-time API data</li>
+                            <li>User-friendly interface for entering coordinates and retrieving data</li>
+                            <li>Integration of imagery and scheduling information for easy planning</li>
+                        </ul>
+                        </div>
+                        <div className={styles.itemButton}>
+                            <Link href="https://github.com/Wizxrdx/nasa-space-apps-2024" target="_blank" rel="noopener noreferrer" className={styles.code}>Code</Link>
+                            <Link href="https://www.youtube.com/watch?v=PGDNyjjESfA" target="_blank" rel="noopener noreferrer" className={styles.youtube}>Demo</Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={`${styles.item} ${'glass-card'}`}>
                     <img className={styles.itemImagePreview} src="/image1.png" alt="Exercise Posture Suggestion System" />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Exercise Posture Suggestion System</h4>
