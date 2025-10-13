@@ -34,6 +34,7 @@ nav ul {
 }
 
 a {
+  font-size: 0.7rem;
   color: gray;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -59,4 +60,20 @@ img {
   max-width: 200px;
   width: 15vw;
   object-fit: cover;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
 }
