@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function ProjectsPage() {
@@ -143,7 +142,7 @@ export default function ProjectsPage() {
                 </div>
 
                 <div className={`${styles.item} ${'glass-card'}`}>
-                    <Image className={styles.itemImagePreview} src="/image1.png" alt="Exercise Posture Suggestion System" />
+                    <img className={styles.itemImagePreview} src="/image1.png" alt="Exercise Posture Suggestion System" />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Exercise Posture Suggestion System</h4>
                         <p className={styles.itemDesc}>An Exercise Posture Suggestion System using deep learning to analyze and provide real-time feedback on correct exercise posture. Integrated pose estimation, human activity recognition, and error detection algorithms to offer personalized guidance. The software interface, built in Unity, allows users to visualize correct postures and optimize workouts, aiming to reduce injury risk and improve exercise effectiveness.</p>
@@ -177,7 +176,7 @@ export default function ProjectsPage() {
                 </div>
 
                 <div className={`${styles.item} ${'glass-card'}`}>
-                    <Image className={styles.itemImagePreview} src="/image2.png" alt="COVID-19 Symptom-Based Quarantine Prediction" />
+                    <img className={styles.itemImagePreview} src="/image2.png" alt="COVID-19 Symptom-Based Quarantine Prediction" />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >COVID-19 Symptom-Based Quarantine Prediction</h4>
                         <p className={styles.itemDesc}>A Research about Machine learning models using Israeli Ministry of Health data to predict individuals requiring quarantine based on common COVID-19 symptoms, offering a faster, accessible alternative to testing while reducing false positives.</p>
