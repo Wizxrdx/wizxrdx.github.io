@@ -67,23 +67,28 @@ span {
 h1 {
   font-size: 2rem;
   font-weight: normal;
+  color: #222;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: normal;
   margin: 0;
+  color: #222;
 }
 
 h3 {
   font-size: 1.2rem;
   font-weight: normal;
   margin: 0;
+  color: #222;
 }
 
 h4 {
   font-size: 1rem;
   font-weight: normal;
+  margin: 0;
+  color: #222;
 }
 
 ul {
