@@ -11,6 +11,34 @@ export default function ExperiencePage() {
 
             <div className={`${styles.item} ${'glass-card'}`}>
                 <div className={styles.itemHeader}>
+                    <img className={styles.itemHeaderLogo} src="/cuatrix.webp" alt="Cuatrix" />
+                    <div className={styles.itemHeaderTitle}>
+                        <h2>Junior IT Consultant</h2>
+                        <h3>Cuatrix Consulting Services Company ltd</h3>
+                        <p>Quezon City, Philippines</p>
+                    </div>
+                    <div className={styles.itemHeaderTags}>
+                        <div>
+                            <h4>Remote</h4>
+                        </div>
+                        <p className={styles.itemHeaderDate}>November 2025 - Current</p>
+                    </div>
+                </div>
+                <div className={styles.itemBody}>
+                    <ul className={styles.itemBodyList}>
+                        <li>Working with backend systems to implement features and ensure data integrity and security.</li>
+                        <li>Assisting in the development and maintenance of web applications using modern frameworks.</li>
+                        <li>Daily meetings with managers and team members to complete assigned tasks.</li>
+                        <li>Adapted to new tools and technologies quickly to enhance productivity.</li>
+                    </ul>
+                    <div className={styles.itemBodyTags}>
+                        <span>Twilio</span> <span>Amazon Web Services</span> <span>React.js</span> <span>Communication</span> <span>Teamwork</span> <span>Adaptability</span>
+                    </div>
+                </div>
+            </div>
+
+            <div className={`${styles.item} ${'glass-card'}`}>
+                <div className={styles.itemHeader}>
                     <img className={styles.itemHeaderLogo} src="/ollopa.jpg" alt="Ollopa Corporation" />
                     <div className={styles.itemHeaderTitle}>
                         <h2>Data Entry</h2>
