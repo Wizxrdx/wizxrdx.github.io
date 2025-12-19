@@ -16,24 +16,25 @@ export default function AboutPage() {
 
       <article className={styles.section}>
         <div className={styles.profile}>
-        <img className={styles.profileImage} src="/profile.png" alt="Wizxrdx" />
-        <div className={`${styles.profileContents} ${'glass-card'}`}>
-          <Link href='mailto:benedick.dumol@gmail.com'>
-            benedick.dumol@gmail.com
-          </Link>
-          <Link href='https://github.com/wizxrdx' target='_blank' rel='noopener noreferrer'>
-            GitHub
-          </Link>
-          <Link href='https://www.linkedin.com/in/benedick-labbao/' target='_blank' rel='noopener noreferrer'>
-            LinkedIn
-          </Link>
-          <Link href='https://www.kaggle.com/benedicklabbao' target='_blank' rel='noopener noreferrer'>
-            Kaggle
-          </Link>
-          <Link href='https://twitter.com/benlabbao' target='_blank' rel='noopener noreferrer'>
-            X (Twitter)
-          </Link>
-        </div>
+          <img className={styles.profileImage} src="/profile.jpg" alt="Wizxrdx" />
+
+          <div className={`${styles.profileContents} ${'glass-card'}`}>
+            <Link href='mailto:benedick.dumol@gmail.com'>
+              benedick.dumol@gmail.com
+            </Link>
+            <Link href='https://github.com/wizxrdx' target='_blank' rel='noopener noreferrer'>
+              GitHub
+            </Link>
+            <Link href='https://www.linkedin.com/in/benedick-labbao/' target='_blank' rel='noopener noreferrer'>
+              LinkedIn
+            </Link>
+            <Link href='https://www.kaggle.com/benedicklabbao' target='_blank' rel='noopener noreferrer'>
+              Kaggle
+            </Link>
+            <Link href='https://twitter.com/benlabbao' target='_blank' rel='noopener noreferrer'>
+              X (Twitter)
+            </Link>
+          </div>
         </div>
         <p className={styles.sectionBody}>
           Hello! I&apos;m <b>Benedick Labbao</b>, an aspiring <b>Machine Learning Engineer</b> and <b>Full-Stack Developer</b>.
