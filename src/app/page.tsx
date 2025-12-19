@@ -10,7 +10,7 @@ export default function AboutPage() {
       <div className={styles.header}>
         <h1 className={styles.headerTitle}>Benedick Labbao</h1>
         <div className={styles.headerBody}>
-          <TextWritingAnimation text={["ML Engineer", "Data Scientist", "Problem Solver", "Computer Engineer"]} /> 
+          <TextWritingAnimation text={["Full Stack Developer", "ML Engineer", "Data Scientist", "Problem Solver", "Computer Engineer"]} /> 
         </div>
       </div>
 
