@@ -41,13 +41,10 @@
     margin-bottom: 0.5rem;
 }
 .skillsSet span {
-    display: inline-block;
-    background: #eee;
-    color: #555;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    margin: 0.2rem 0.2rem 0.2rem 0;
-    font-size: 0.7rem;
+    margin: 0.1rem;
+    padding: 0.3rem 0.6rem;
+    background-color: #f0f0f0;
+    white-space: normal;
 }
 
 
