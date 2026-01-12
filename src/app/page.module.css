@@ -33,7 +33,7 @@
     flex-direction: column;
     align-items: center;
     float: right;
-    margin: 0 0 1rem 1rem;
+    margin: 0 0 0 1rem;
 }
 .profileImage {
     margin-bottom: 1rem;
@@ -79,7 +79,7 @@
     .section {
         display: flex;
         max-width: 800px;
-        margin: 1rem auto;
+        margin: 0 auto;
         flex-direction: column;
         align-items: center;
     }
@@ -87,6 +87,7 @@
         margin: 0;
     }
     .profileImage {
+        margin: 0;
         width: 30vw;
         object-fit: cover;
     }
