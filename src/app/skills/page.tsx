@@ -18,6 +18,7 @@ export default function SkillsPage() {
                     <h4 className={styles.skillsSetTitle} >Programming Languages</h4>
                     <span>Python</span>
                     <span>TypeScript</span>
+                    <span>JavaScript</span>
                     <span>Dart</span>
                     <span>PHP</span>
                     <span>C++</span>
@@ -45,32 +46,40 @@ export default function SkillsPage() {
                 </div>
 
                 <div className={`${styles.skillsSet} ${'glass-card'}`}>
-                    <h4 className={styles.skillsSetTitle} >Frameworks & Libraries</h4>
+                    <h4 className={styles.skillsSetTitle} >APIs, Frameworks & Libraries</h4>
+                    <span>Twilio API</span>
+                    <span>Digital Ocean API</span>
                     <span>FastAPI</span>
                     <span>Next.js</span>
+                    <span>React.js</span>
                     <span>Flask</span>
                     <span>Flutter</span>
                     <span>React-Native</span>
+                    <span>OpenAI</span>
+                    <span>Selenium</span>
+                    <span>Qiskit</span>
                 </div>
 
                 <div className={`${styles.skillsSet} ${'glass-card'}`}>
                     <h4 className={styles.skillsSetTitle} >Tools & Technologies</h4>
-                    <span>OpenAI</span>
+                    <span>Twilio</span>
+                    <span>Amazon Web Services</span>
+                    <span>Digital Ocean</span>
                     <span>Kaggle</span>
                     <span>Jupyter Notebook</span>
                     <span>Git</span>
                     <span>Docker</span>
                     <span>Postman</span>
                     <span>Firebase</span>
-                    <span>AWS</span>
-                    <span>Selenium</span>
-                    <span>Qiskit</span>
                 </div>
 
                 <div className={`${styles.skillsSet} ${'glass-card'}`}>
                     <h4 className={styles.skillsSetTitle} >Soft Skills</h4>
+                    <span>Efficient Execution</span>
+                    <span>Fast Learner</span>
                     <span>Problem Solving</span>
                     <span>Detail Oriented</span>
+                    <span>Collaboration</span>
                     <span>Adaptability</span>
                     <span>Time Management</span>
                 </div>

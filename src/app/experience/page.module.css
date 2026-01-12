@@ -46,8 +46,10 @@
 .itemHeaderLogo {
     max-width: 200px;
     min-width: 64px;
+    max-height: 200px;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
 }
 .itemHeaderTitle {
     display: flex;
