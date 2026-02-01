@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './page.module.css';
+import YouTubeEmbed from '../../lib/YouTubeEmbed';
 
 export default function ProjectsPage() {
     return (
@@ -12,7 +13,7 @@ export default function ProjectsPage() {
             <div className={styles.itemContainer}>
 
                 <div className={`${styles.item} ${'glass-card'}`}>
-                    <iframe className={styles.itemVideoPreview} src="https://www.youtube.com/embed/5agHeSbKPbs" title='Hybrid Exoplanet Recognition and Model Evaluation System'></iframe>
+                    <YouTubeEmbed videoId="5agHeSbKPbs" title="Hybrid Exoplanet Recognition and Model Evaluation System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Hybrid Exoplanet Recognition and Model Evaluation System - HERMES</h4>
                         <p className={styles.itemDesc}>HERMES is a web application designed for the <strong>NASA Space Apps Challenge 2025</strong>, helping users classify exoplanet candidates efficiently. It allows users to upload or edit exoplanet datasets and run a machine learning model to identify confirmed planets, potential candidates, or false positives.</p>
@@ -29,13 +30,13 @@ export default function ProjectsPage() {
                         </div>
                         <div className={styles.itemFeatures}>
                             <h4>Features:</h4>
-                        <ul>
-                            <li>Exoplanet Classification Engine</li>
-                            <li>Dataset Upload & Editing</li>
-                            <li>Interactive Visual Analytics</li>
-                            <li>Manual Model Retraining</li>
-                            <li>Web-Based Interface</li>
-                        </ul>
+                            <ul>
+                                <li>Exoplanet Classification Engine</li>
+                                <li>Dataset Upload & Editing</li>
+                                <li>Interactive Visual Analytics</li>
+                                <li>Manual Model Retraining</li>
+                                <li>Web-Based Interface</li>
+                            </ul>
                         </div>
                         <div className="buttonContainer">
                             <Link href="https://github.com/Wizxrdx/nasa-space-apps-2025" target="_blank" rel="noopener noreferrer" className="code">Code</Link>
@@ -46,7 +47,7 @@ export default function ProjectsPage() {
                 </div>
 
                 <div className={`${styles.item} ${'glass-card'}`}>
-                    <iframe className={styles.itemVideoPreview} src="https://www.youtube.com/embed/SsIo-v1et94" title='Smart Packaging Control & Demand Forecasting Web Application'></iframe>
+                    <YouTubeEmbed videoId="SsIo-v1et94" title="Smart Packaging Control & Demand Forecasting Web Application" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Smart Packaging Control & Demand Forecasting Web Application</h4>
                         <p className={styles.itemDesc}>Developed a web application deployed on a Raspberry Pi to remotely monitor and control a packaging machine. Integrated a SARIMA forecasting model into the app to predict daily packaging demand, achieving a 4.61% MAPE. The project scope focused solely on the software and system integration.</p>
@@ -64,12 +65,12 @@ export default function ProjectsPage() {
                         </div>
                         <div className={styles.itemFeatures}>
                             <h4>Features:</h4>
-                        <ul>
-                            <li>Automated packaging process with real-time monitoring and control</li>
-                            <li>Intelligent demand forecasting using SARIMA with monthly retraining</li>
-                            <li>IoT-enabled Raspberry Pi integration for seamless machine operation</li>
-                            <li>Data-driven optimization of packaging workflow and production tracking</li>
-                        </ul>
+                            <ul>
+                                <li>Automated packaging process with real-time monitoring and control</li>
+                                <li>Intelligent demand forecasting using SARIMA with monthly retraining</li>
+                                <li>IoT-enabled Raspberry Pi integration for seamless machine operation</li>
+                                <li>Data-driven optimization of packaging workflow and production tracking</li>
+                            </ul>
                         </div>
                         <div className="buttonContainer">
                             <Link href="https://github.com/Wizxrdx/charcoal-forecasting-app" target="_blank" rel="noopener noreferrer" className="code">Code</Link>
@@ -79,7 +80,7 @@ export default function ProjectsPage() {
                 </div>
 
                 <div className={`${styles.item} ${'glass-card'}`}>
-                    <iframe className={styles.itemVideoPreview} src="https://www.youtube.com/embed/ZG2r1KPy5RM" title='AI-Powered Mosquito Monitoring System'></iframe>
+                    <YouTubeEmbed videoId="ZG2r1KPy5RM" title="AI-Powered Mosquito Monitoring System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >AI-Powered Mosquito Monitoring System</h4>
                         <p className={styles.itemDesc}>Research and prototype of an attractant-based trap with image recognition to identify Aedes mosquitoes, with a companion mobile app for real-time location monitoring and notifications. The system&apos;s detection accuracy was evaluated under engineering performance and efficiency constraints.</p>
@@ -97,12 +98,12 @@ export default function ProjectsPage() {
                         </div>
                         <div className={styles.itemFeatures}>
                             <h4>Features:</h4>
-                        <ul>
-                            <li>Deep learning-based Aedes detection</li>
-                            <li>Integrated image capture and classification</li>
-                            <li>GPS geotagging of trap location</li>
-                            <li>Mobile app alerts and monitoring</li>
-                        </ul>
+                            <ul>
+                                <li>Deep learning-based Aedes detection</li>
+                                <li>Integrated image capture and classification</li>
+                                <li>GPS geotagging of trap location</li>
+                                <li>Mobile app alerts and monitoring</li>
+                            </ul>
                         </div>
                         <div className="buttonContainer">
                             <Link href="https://github.com/Wizxrdx/mosquito-detection" target="_blank" rel="noopener noreferrer" className="code">Code</Link>
@@ -112,7 +113,7 @@ export default function ProjectsPage() {
                 </div>
 
                 <div className={`${styles.item} ${'glass-card'}`}>
-                    <iframe className={styles.itemVideoPreview} src="https://www.youtube.com/embed/PGDNyjjESfA" title='Hybrid Exoplanet Recognition and Model Evaluation System'></iframe>
+                    <YouTubeEmbed videoId="PGDNyjjESfA" title="Hybrid Exoplanet Recognition and Model Evaluation System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Automated Remote Geospatial User Service - ARGUS</h4>
                         <p className={styles.itemDesc}>ARGUS is a Web platform for <strong>NASA Space Apps Challenge 2024</strong>, that allows users to view multispectral satellite images and check future satellite pass schedules by entering latitude and longitude coordinates, providing interactive map-based visualizations and scheduling information via APIs.</p>
@@ -127,12 +128,12 @@ export default function ProjectsPage() {
                         </div>
                         <div className={styles.itemFeatures}>
                             <h4>Features:</h4>
-                        <ul>
-                            <li>Interactive map-based display of multispectral satellite imagery</li>
-                            <li>Satellite pass prediction using real-time API data</li>
-                            <li>User-friendly interface for entering coordinates and retrieving data</li>
-                            <li>Integration of imagery and scheduling information for easy planning</li>
-                        </ul>
+                            <ul>
+                                <li>Interactive map-based display of multispectral satellite imagery</li>
+                                <li>Satellite pass prediction using real-time API data</li>
+                                <li>User-friendly interface for entering coordinates and retrieving data</li>
+                                <li>Integration of imagery and scheduling information for easy planning</li>
+                            </ul>
                         </div>
                         <div className="buttonContainer">
                             <Link href="https://github.com/Wizxrdx/nasa-space-apps-2024" target="_blank" rel="noopener noreferrer" className="code">Code</Link>
@@ -161,12 +162,12 @@ export default function ProjectsPage() {
                         </div>
                         <div className={styles.itemFeatures}>
                             <h4>Features:</h4>
-                        <ul>
-                            <li>Real-time exercise posture analysis with deep learning</li>
-                            <li>Pose estimation using ResNet-50, YOLOv8, and YOLO-NAS</li>
-                            <li>Human activity recognition with Conv(2+1)D, 3D CNN, and CNN-BiLSTM</li>
-                            <li>Interactive Unity interface for feedback and posture visualization</li>
-                        </ul>
+                            <ul>
+                                <li>Real-time exercise posture analysis with deep learning</li>
+                                <li>Pose estimation using ResNet-50, YOLOv8, and YOLO-NAS</li>
+                                <li>Human activity recognition with Conv(2+1)D, 3D CNN, and CNN-BiLSTM</li>
+                                <li>Interactive Unity interface for feedback and posture visualization</li>
+                            </ul>
                         </div>
                         <div className="buttonContainer">
                             <Link href="https://github.com/Wizxrdx/Project_Exercise_Posture_Correction/" target="_blank" rel="noopener noreferrer" className="code">Code</Link>
@@ -194,17 +195,17 @@ export default function ProjectsPage() {
                         </div>
                         <div className={styles.itemFeatures}>
                             <h4>Features:</h4>
-                        <ul>
-                            <li>Symptom-based risk prediction with supervised ML models</li>
-                            <li>Data preprocessing and feature engineering for improved accuracy</li>
-                            <li>Real-time quarantine recommendations for rapid intervention</li>
-                            <li>Performance evaluation to reduce false positives</li>
-                        </ul>
+                            <ul>
+                                <li>Symptom-based risk prediction with supervised ML models</li>
+                                <li>Data preprocessing and feature engineering for improved accuracy</li>
+                                <li>Real-time quarantine recommendations for rapid intervention</li>
+                                <li>Performance evaluation to reduce false positives</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
-      </div>
+        </div>
     )
 }
