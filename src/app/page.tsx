@@ -46,7 +46,7 @@ export default function AboutPage() {
           My expertise spans <b>Machine Learning</b>, <b>Deep Learning</b>, <b>Data Analysis</b>, <b>Predictive Analysis</b>, and <b>Full-Stack Development</b>.
         </p>
         <p className={styles.sectionBody}>
-          My hobbies right now include IoT projects, gaming, and exploring new technologies. Currently learning about Front-end Design and Agentic AI.
+          My hobbies right now include IoT projects, gaming, and exploring new technologies. Currently learning about Frontend Development, Agentic AI and RAG.
         </p>
         <p className={styles.sectionBody}>
           You can reach me out via email at <b>benedick.dumol@gmail.com</b> or any of my social media accounts.</p>
