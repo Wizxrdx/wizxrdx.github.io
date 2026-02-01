@@ -1,27 +1,16 @@
 "use client";
 
-import { useEffect } from "react";
-
 export default function CredlyBadge({ badgeId }: { badgeId: string }) {
-  useEffect(() => {
-    const scriptId = "credly-embed-script";
-
-    // Avoid injecting the script multiple times
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement("script");
-      script.id = scriptId;
-      script.src = "//cdn.credly.com/assets/utilities/embed.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
+  const host = "https://www.credly.com";
+  const embedUrl = `${host}/embedded_badge/${badgeId}`;
 
   return (
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id={badgeId}
-      data-share-badge-host="https://www.credly.com"
+    <iframe
+      name="acclaim-badge"
+      id={`embedded-badge-${badgeId}`}
+      src={embedUrl}
+      style={{ width: "150px", height: "270px", border: "none" }}
+      title="View my verified achievement on Credly."
     />
   );
 }
