@@ -26,13 +26,15 @@ export default function ExperiencePage() {
                 </div>
                 <div className={styles.itemBody}>
                     <ul className={styles.itemBodyList}>
-                        <li>Working with backend systems to implement features and ensure data integrity and security.</li>
+                        <li>Implementing new features with emerging technologies and optimizing existing ones for better performance and user experience.</li>
+                        <li>Working with backend systems and frontend interfaces to implement features and ensure data integrity and security.</li>
                         <li>Assisting in the development and maintenance of web applications using modern frameworks.</li>
+                        <li>Testing and debugging software to ensure optimal performance and reliability.</li>
                         <li>Daily meetings with managers and team members to complete assigned tasks.</li>
-                        <li>Adapted to new tools and technologies quickly to enhance productivity.</li>
+                        <li>Deployed production-grade applications and services to cloud platforms.</li>
                     </ul>
                     <div className={styles.itemBodyTags}>
-                        <span>Twilio</span> <span>Amazon Web Services</span> <span>React.js</span> <span>Communication</span> <span>Teamwork</span> <span>Adaptability</span>
+                        <span>Twilio</span> <span>Digital Ocean</span> <span>Amazon Web Services</span> <span>React.js</span> <span>Node.js</span> <span>Python</span> <span>Trello</span> <span>GitHub</span> <span>Communication</span> <span>Teamwork</span> <span>Adaptability</span>
                     </div>
                 </div>
             </div>
