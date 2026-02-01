@@ -11,7 +11,7 @@ export default function EducationPage() {
 
             <div className={`${styles.itemContainer} glass-card`}>
                 <div className={styles.itemHeaderContainer}>
-                    <img className={styles.itemHeaderLogo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/f/fe/20241223164003%21T.I.P._Logo.png/120px-T.I.P._Logo.png" alt="T.I.P logo" />
+                    <img className={styles.itemHeaderLogo} src="/TIP.png" alt="T.I.P logo" />
                     <div className={styles.itemHeaderText}>
                         <h3>
                             Technological Institute of the Philippines
@@ -41,7 +41,7 @@ export default function EducationPage() {
 
             <div className={`${styles.itemContainer} glass-card`}>
                 <div className={styles.itemHeaderContainer}>
-                    <img className={styles.itemHeaderLogo} src="https://scontent.fmnl43-1.fna.fbcdn.net/v/t39.30808-6/302424011_489352479863924_4633747691815234831_n.png?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=CJs-2sqIbv0Q7kNvwG0xtjE&_nc_oc=AdmretrKCyfSiPmKvITlrb_2JkjTwmR5_1Sd2SUehVjqLWcxudOtqQVcRERIvfxtVdM&_nc_zt=23&_nc_ht=scontent.fmnl43-1.fna&_nc_gid=T8mOmiYtdfUG88NtD4HjAA&oh=00_Afd7LQFGLndcAf3OVj1E25k_KjIUVuijhDROsXOBvYKKfg&oe=68F3B2FF" alt="AiTECH logo" />
+                    <img className={styles.itemHeaderLogo} src="/aitech.png" alt="AiTECH logo" />
                     <div className={styles.itemHeaderText}>
                         <h3>
                             Antipolo Institute of Technology

@@ -33,6 +33,7 @@
 }
 .itemHeaderLogo {
     margin: 0;
+    mix-blend-mode: multiply;
 }
 .itemHeaderContainer {
     text-align: left;
