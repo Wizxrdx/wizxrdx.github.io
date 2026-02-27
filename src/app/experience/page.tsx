@@ -13,7 +13,7 @@ export default function ExperiencePage() {
                 <div className={styles.itemHeader}>
                     <img className={styles.itemHeaderLogo} src="/cuatrix.webp" alt="Cuatrix" />
                     <div className={styles.itemHeaderTitle}>
-                        <h2>Junior IT Consultant</h2>
+                        <h2>Full Stack Developer</h2>
                         <h3>Cuatrix Consulting Services Company ltd</h3>
                         <p>Quezon City, Philippines</p>
                     </div>
