@@ -12,7 +12,6 @@ export default function Background() {
         if (!ctx) return;
 
         let neurons: { x: number; y: number; radius: number; dx: number; dy: number; }[] = [];
-        let numNeurons = 0;
         const maxDistance = 100;
 
         const resizeCanvas = () => {
