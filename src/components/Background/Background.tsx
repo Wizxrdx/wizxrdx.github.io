@@ -7,78 +7,92 @@ export default function Background() {
 
     useEffect(() => {
         const canvas = canvasRef.current;
-        const ctx = canvas?.getContext('2d');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
 
-        if (canvas && ctx) {
-            // Set canvas size
+        let neurons: { x: number; y: number; radius: number; dx: number; dy: number; }[] = [];
+        let numNeurons = 0;
+        const maxDistance = 100;
+
+        const resizeCanvas = () => {
             canvas.width = window.innerWidth;
-            canvas.height = Math.max(
-                document.documentElement.scrollHeight, // Total height of the page
-                document.documentElement.clientHeight // Viewport height
-            );
-            
+            canvas.height = window.innerHeight; // Fixed viewport height
+
             const area = canvas.width * canvas.height;
-            const neurons: { x: number; y: number; radius: number; dx: number; dy: number; }[] = [];
-            const numNeurons = Math.floor(area / 5000);
-            const maxDistance = 100;
-            console.log(numNeurons, maxDistance);
+            const targetNeurons = Math.floor(area / 8000); // Consistent density
 
-            // Generate random neurons (circles)
-            for (let i = 0; i < numNeurons; i++) {
-                neurons.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    radius: 4, // Circle size
-                    dx: (Math.random() - 0.2) * 0.2, // Horizontal speed
-                    dy: (Math.random() - 0.2) * 0.2  // Vertical speed
-                });
+            // Adjust neuron count without losing existing ones
+            if (neurons.length < targetNeurons) {
+                for (let i = neurons.length; i < targetNeurons; i++) {
+                    neurons.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        radius: 3,
+                        dx: (Math.random() - 0.5) * 0.4,
+                        dy: (Math.random() - 0.5) * 0.4
+                    });
+                }
+            } else if (neurons.length > targetNeurons) {
+                neurons = neurons.slice(0, targetNeurons);
             }
+        };
 
-            // Draw neurons and connections
-            const animate = () => {
-                ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
 
-                // Draw connections
-                for (let i = 0; i < neurons.length; i++) {
-                    for (let j = i + 1; j < neurons.length; j++) {
-                        const dx = neurons[i].x - neurons[j].x;
-                        const dy = neurons[i].y - neurons[j].y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
+        let animationId: number;
+        const animate = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-                        if (distance < maxDistance) {
-                            ctx.beginPath();
-                            ctx.moveTo(neurons[i].x, neurons[i].y);
-                            ctx.lineTo(neurons[j].x, neurons[j].y);
-                            ctx.strokeStyle = `rgba(200, 200, 200, ${1 - distance / maxDistance})`; // Fainter lines for farther neurons
-                            ctx.lineWidth = 1;
-                            ctx.stroke();
-                        }
+            // Draw connections
+            for (let i = 0; i < neurons.length; i++) {
+                for (let j = i + 1; j < neurons.length; j++) {
+                    const dx = neurons[i].x - neurons[j].x;
+                    const dy = neurons[i].y - neurons[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < maxDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(neurons[i].x, neurons[i].y);
+                        ctx.lineTo(neurons[j].x, neurons[j].y);
+                        ctx.strokeStyle = `rgba(200, 200, 200, ${1 - distance / maxDistance})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
                     }
                 }
+            }
 
-                // Draw neurons (circles)
-                neurons.forEach((neuron) => {
-                    ctx.beginPath();
-                    ctx.arc(neuron.x, neuron.y, neuron.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = '#d3d3d3d3'; // Light gray color
-                    ctx.fill();
+            // Draw & move neurons
+            neurons.forEach((neuron) => {
+                ctx.beginPath();
+                ctx.arc(neuron.x, neuron.y, neuron.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(211, 211, 211, 0.7)';
+                ctx.fill();
 
-                    // Update neuron position
-                    neuron.x += neuron.dx;
-                    neuron.y += neuron.dy;
+                neuron.x += neuron.dx;
+                neuron.y += neuron.dy;
 
-                    // Bounce off walls
-                    if (neuron.x < 0 || neuron.x > canvas.width) neuron.dx *= -1;
-                    if (neuron.y < 0 || neuron.y > canvas.height) neuron.dy *= -1;
-                });
+                // Bounce off walls (using current canvas size)
+                if (neuron.x < 0 || neuron.x > canvas.width) neuron.dx *= -1;
+                if (neuron.y < 0 || neuron.y > canvas.height) neuron.dy *= -1;
 
-                requestAnimationFrame(animate);
-            };
+                // Keep them within bounds if the window shrinks suddenly
+                neuron.x = Math.max(0, Math.min(neuron.x, canvas.width));
+                neuron.y = Math.max(0, Math.min(neuron.y, canvas.height));
+            });
 
-            animate(); // Initial draw
-        }
+            animationId = requestAnimationFrame(animate);
+        };
+
+        animate();
+
+        return () => {
+            window.removeEventListener('resize', resizeCanvas);
+            cancelAnimationFrame(animationId);
+        };
     }, []);
-        return (
+    return (
         <canvas ref={canvasRef} className={styles.canvas}></canvas>
     );
 }
