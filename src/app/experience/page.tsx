@@ -67,6 +67,35 @@ export default function ExperiencePage() {
                     </div>
                 </div>
             </div>
+
+            <div className={`${styles.item} ${'glass-card'}`}>
+                <div className={styles.itemHeader}>
+                    <img className={styles.itemHeaderLogo} src="/freelance.png" alt="Freelance Work" />
+                    <div className={styles.itemHeaderTitle}>
+                        <h2>Automation Software Engineer</h2>
+                        <h3>Self-Employed (Freelance)</h3>
+                        <p>Muntinlupa City, Philippines</p>
+                    </div>
+                    <div className={styles.itemHeaderTags}>
+                        <div>
+                            <h4>On-site</h4>
+                        </div>
+                        <p className={styles.itemHeaderDate}>December 2024 - June 2025</p>
+                    </div>
+                </div>
+                <div className={styles.itemBody}>
+                    <ul className={styles.itemBodyList}>
+                        <li>Built a Flask-based automation platform for a charcoal packaging machine</li>
+                        <li>Integrated a SARIMA forecasting model into the web app to predict daily packaging demand.</li>
+                        <li>Developed a Flask-based backend to serve predictions and manage data.</li>
+                        <li>Deployed the application to a Raspberry Pi for on-site use.</li>
+                        <li>Collaborated with the client to complete the project.</li>
+                    </ul>
+                    <div className={styles.itemBodyTags}>
+                        <span>Raspberry Pi</span> <span>Flask</span> <span>statsmodels</span> <span>pandas</span> <span>SQLite</span>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
