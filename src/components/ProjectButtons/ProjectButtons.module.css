@@ -1,0 +1,132 @@
+.buttonContainer {
+  margin: 0.7rem 0;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.buttonBase {
+  --btn-top: #2f2f2f;
+  --btn-bottom: #1f1f1f;
+  --edge-1: #4a4a4a;
+  --edge-2: #2b2b2b;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.46rem 0.95rem;
+  border-radius: 0.6rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translateY(0);
+  color: #f7f7f7;
+  background:
+    linear-gradient(160deg, var(--btn-top) 0%, var(--btn-bottom) 100%) padding-box,
+    linear-gradient(120deg, var(--edge-1) 0%, var(--edge-2) 100%) border-box;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.17),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+}
+
+.buttonBase:hover {
+  transform: translateY(-2px) scale(1.015);
+  filter: saturate(1.08);
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26);
+}
+
+.buttonBase:active {
+  transform: translateY(0);
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.buttonBase:focus-visible {
+  outline: 3px solid rgba(34, 34, 34, 0.3);
+  outline-offset: 2px;
+}
+
+.buttonBase::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.24) 50%, rgba(255, 255, 255, 0) 70%);
+  transform: translateX(-140%);
+  transition: transform 0.55s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.buttonBase:hover::before {
+  transform: translateX(140%);
+}
+
+.codeButton {
+  --btn-top: #363636;
+  --btn-bottom: #202020;
+  --edge-1: #606060;
+  --edge-2: #313131;
+}
+
+.codeButton:hover {
+  color: #ffffff;
+}
+
+.demoButton {
+  --btn-top: #ef4a43;
+  --btn-bottom: #be2f29;
+  --edge-1: #ff8478;
+  --edge-2: #c63f39;
+}
+
+.demoButton:hover {
+  color: #ffffff;
+}
+
+.visitButton {
+  --btn-top: #4e96da;
+  --btn-bottom: #2c6ba5;
+  --edge-1: #8bc1f5;
+  --edge-2: #3c7cb5;
+}
+
+.visitButton:hover {
+  color: #ffffff;
+}
+
+.paperButton {
+  --btn-top: #ffe86a;
+  --btn-bottom: #e3c53c;
+  --edge-1: #fff3a7;
+  --edge-2: #d8b62f;
+  color: #2f2600;
+}
+
+.paperButton:hover {
+  color: #261f00;
+}
+
+@media (max-width: 640px) {
+  .buttonBase {
+    min-width: 5.2rem;
+    justify-content: center;
+  }
+}
