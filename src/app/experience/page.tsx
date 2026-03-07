@@ -11,7 +11,14 @@ export default function ExperiencePage() {
 
             <div className={`${styles.item} ${'glass-card'}`}>
                 <div className={styles.itemHeader}>
-                    <img className={styles.itemHeaderLogo} src="/cuatrix.webp" alt="Cuatrix" />
+                    <img
+                        className={styles.itemHeaderLogo}
+                        src="/cuatrix.webp"
+                        alt="Cuatrix"
+                        width={200}
+                        height={200}
+                        decoding="async"
+                    />
                     <div className={styles.itemHeaderTitle}>
                         <h2>Full Stack Developer</h2>
                         <h3>Cuatrix Consulting Services Company ltd</h3>
@@ -41,7 +48,14 @@ export default function ExperiencePage() {
 
             <div className={`${styles.item} ${'glass-card'}`}>
                 <div className={styles.itemHeader}>
-                    <img className={styles.itemHeaderLogo} src="/ollopa.jpg" alt="Ollopa Corporation" />
+                    <img
+                        className={styles.itemHeaderLogo}
+                        src="/ollopa.jpg"
+                        alt="Ollopa Corporation"
+                        width={200}
+                        height={200}
+                        decoding="async"
+                    />
                     <div className={styles.itemHeaderTitle}>
                         <h2>Data Entry</h2>
                         <h3>Ollopa Corporation</h3>
@@ -70,7 +84,14 @@ export default function ExperiencePage() {
 
             <div className={`${styles.item} ${'glass-card'}`}>
                 <div className={styles.itemHeader}>
-                    <img className={styles.itemHeaderLogo} src="/freelance.png" alt="Freelance Work" />
+                    <img
+                        className={styles.itemHeaderLogo}
+                        src="/freelance.png"
+                        alt="Freelance Work"
+                        width={200}
+                        height={200}
+                        decoding="async"
+                    />
                     <div className={styles.itemHeaderTitle}>
                         <h2>Automation Software Engineer</h2>
                         <h3>Self-Employed (Freelance)</h3>

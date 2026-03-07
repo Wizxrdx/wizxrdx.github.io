@@ -16,7 +16,14 @@ export default function AboutPage() {
 
       <article className={styles.section}>
         <div className={styles.profile}>
-          <img className={styles.profileImage} src="/profile.jpg" alt="Wizxrdx" />
+          <img
+            className={styles.profileImage}
+            src="/profile.jpg"
+            alt="Wizxrdx"
+            width={300}
+            height={300}
+            decoding="async"
+          />
 
           <div className={`${styles.profileContents} ${'glass-card'}`}>
             <Link href='mailto:benedick.dumol@gmail.com'>
