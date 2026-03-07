@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
+import VisitorCounter from '@/hooks/VisitorCounter'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareGithub, faLinkedin, faXTwitter, faKaggle } from '@fortawesome/free-brands-svg-icons';
@@ -26,6 +27,8 @@ export default function Footer() {
         </div>
         {/* Footer Name or Branding */}
         <p className={styles.branding}>© {new Date().getFullYear()} Made with ❤️ by Wizxrdx</p>
+
+        <VisitorCounter />
       </div>
     </footer>
   );

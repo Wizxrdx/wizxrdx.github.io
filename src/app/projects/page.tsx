@@ -1,6 +1,10 @@
-import Link from 'next/link';
 import styles from './page.module.css';
 import YouTubeEmbed from '../../lib/YouTubeEmbed';
+import CodeButton from '@/components/ProjectButtons/CodeButton';
+import DemoButton from '@/components/ProjectButtons/DemoButton';
+import VisitButton from '@/components/ProjectButtons/VisitButton';
+import PaperButton from '@/components/ProjectButtons/PaperButton';
+import projectButtonStyles from '@/components/ProjectButtons/ProjectButtons.module.css';
 
 export default function ProjectsPage() {
     return (
@@ -38,10 +42,10 @@ export default function ProjectsPage() {
                                 <li>Web-Based Interface</li>
                             </ul>
                         </div>
-                        <div className="buttonContainer">
-                            <Link href="https://github.com/Wizxrdx/nasa-space-apps-2025" target="_blank" rel="noopener noreferrer" className="code">Code</Link>
-                            <Link href="https://www.youtube.com/watch?v=5agHeSbKPbs" target="_blank" rel="noopener noreferrer" className="youtube">Demo</Link>
-                            <Link href="https://dev.wizxrdx.me/nasa-space-apps-2025" target="_blank" rel="noopener noreferrer" className="visit">Visit</Link>
+                        <div className={projectButtonStyles.buttonContainer}>
+                            <CodeButton href="https://github.com/Wizxrdx/nasa-space-apps-2025" />
+                            <DemoButton href="https://www.youtube.com/watch?v=5agHeSbKPbs" />
+                            <VisitButton href="https://dev.wizxrdx.me/nasa-space-apps-2025" />
                         </div>
                     </div>
                 </div>
@@ -72,9 +76,9 @@ export default function ProjectsPage() {
                                 <li>Data-driven optimization of packaging workflow and production tracking</li>
                             </ul>
                         </div>
-                        <div className="buttonContainer">
-                            <Link href="https://github.com/Wizxrdx/charcoal-forecasting-app" target="_blank" rel="noopener noreferrer" className="code">Code</Link>
-                            <Link href="https://www.youtube.com/watch?v=SsIo-v1et94" target="_blank" rel="noopener noreferrer" className="youtube">Demo</Link>
+                        <div className={projectButtonStyles.buttonContainer}>
+                            <CodeButton href="https://github.com/Wizxrdx/charcoal-forecasting-app" />
+                            <DemoButton href="https://www.youtube.com/watch?v=SsIo-v1et94" />
                         </div>
                     </div>
                 </div>
@@ -105,9 +109,9 @@ export default function ProjectsPage() {
                                 <li>Mobile app alerts and monitoring</li>
                             </ul>
                         </div>
-                        <div className="buttonContainer">
-                            <Link href="https://github.com/Wizxrdx/mosquito-detection" target="_blank" rel="noopener noreferrer" className="code">Code</Link>
-                            <Link href="https://www.youtube.com/watch?v=ZG2r1KPy5RM" target="_blank" rel="noopener noreferrer" className="youtube">Demo</Link>
+                        <div className={projectButtonStyles.buttonContainer}>
+                            <CodeButton href="https://github.com/Wizxrdx/mosquito-detection" />
+                            <DemoButton href="https://www.youtube.com/watch?v=ZG2r1KPy5RM" />
                         </div>
                     </div>
                 </div>
@@ -135,15 +139,22 @@ export default function ProjectsPage() {
                                 <li>Integration of imagery and scheduling information for easy planning</li>
                             </ul>
                         </div>
-                        <div className="buttonContainer">
-                            <Link href="https://github.com/Wizxrdx/nasa-space-apps-2024" target="_blank" rel="noopener noreferrer" className="code">Code</Link>
-                            <Link href="https://www.youtube.com/watch?v=PGDNyjjESfA" target="_blank" rel="noopener noreferrer" className="youtube">Demo</Link>
+                        <div className={projectButtonStyles.buttonContainer}>
+                            <CodeButton href="https://github.com/Wizxrdx/nasa-space-apps-2024" />
+                            <DemoButton href="https://www.youtube.com/watch?v=PGDNyjjESfA" />
                         </div>
                     </div>
                 </div>
 
                 <div className={`${styles.item} ${'glass-card'}`}>
-                    <img className={styles.itemImagePreview} src="/image1.png" alt="Exercise Posture Suggestion System" />
+                    <img
+                        className={styles.itemImagePreview}
+                        src="/image1.png"
+                        alt="Exercise Posture Suggestion System"
+                        width={1280}
+                        height={720}
+                        decoding="async"
+                    />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Exercise Posture Suggestion System</h4>
                         <p className={styles.itemDesc}>An Exercise Posture Suggestion System using deep learning to analyze and provide real-time feedback on correct exercise posture. Integrated pose estimation, human activity recognition, and error detection algorithms to offer personalized guidance. The software interface, built in Unity, allows users to visualize correct postures and optimize workouts, aiming to reduce injury risk and improve exercise effectiveness.</p>
@@ -169,15 +180,22 @@ export default function ProjectsPage() {
                                 <li>Interactive Unity interface for feedback and posture visualization</li>
                             </ul>
                         </div>
-                        <div className="buttonContainer">
-                            <Link href="https://github.com/Wizxrdx/Project_Exercise_Posture_Correction/" target="_blank" rel="noopener noreferrer" className="code">Code</Link>
-                            <Link href="https://github.com/Wizxrdx/Project_Exercise_Posture_Correction/blob/main/Research_Paper/Mendoza_Labbao_Final_Project_DATA_SCI.pdf" target="_blank" rel="noopener noreferrer" className="paper">Paper</Link>
+                        <div className={projectButtonStyles.buttonContainer}>
+                            <CodeButton href="https://github.com/Wizxrdx/Project_Exercise_Posture_Correction/" />
+                            <PaperButton href="https://github.com/Wizxrdx/Project_Exercise_Posture_Correction/blob/main/Research_Paper/Mendoza_Labbao_Final_Project_DATA_SCI.pdf" />
                         </div>
                     </div>
                 </div>
 
                 <div className={`${styles.item} ${'glass-card'}`}>
-                    <img className={styles.itemImagePreview} src="/image2.png" alt="COVID-19 Symptom-Based Quarantine Prediction" />
+                    <img
+                        className={styles.itemImagePreview}
+                        src="/image2.png"
+                        alt="COVID-19 Symptom-Based Quarantine Prediction"
+                        width={1280}
+                        height={720}
+                        decoding="async"
+                    />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >COVID-19 Symptom-Based Quarantine Prediction</h4>
                         <p className={styles.itemDesc}>A Research about Machine learning models using Israeli Ministry of Health data to predict individuals requiring quarantine based on common COVID-19 symptoms, offering a faster, accessible alternative to testing while reducing false positives.</p>

@@ -2,6 +2,10 @@ import TextWritingAnimation from '@/components/TextTypingAnimation/TextTypingAni
 import styles from './page.module.css'
 import Link from 'next/link';
 import SlidingPicture from '@/components/SlidingPicture/SlidingPicture';
+import CodeButton from '@/components/ProjectButtons/CodeButton';
+import DemoButton from '@/components/ProjectButtons/DemoButton';
+import VisitButton from '@/components/ProjectButtons/VisitButton';
+import projectButtonStyles from '@/components/ProjectButtons/ProjectButtons.module.css';
 
 export default function AboutPage() {
   return (
@@ -16,7 +20,14 @@ export default function AboutPage() {
 
       <article className={styles.section}>
         <div className={styles.profile}>
-          <img className={styles.profileImage} src="/profile.jpg" alt="Wizxrdx" />
+          <img
+            className={styles.profileImage}
+            src="/profile.jpg"
+            alt="Wizxrdx"
+            width={300}
+            height={300}
+            decoding="async"
+          />
 
           <div className={`${styles.profileContents} ${'glass-card'}`}>
             <Link href='mailto:benedick.dumol@gmail.com'>
@@ -58,10 +69,10 @@ export default function AboutPage() {
         <p>
           HERMES is a web application designed for the NASA Space Apps Challenge 2025, helping users classify exoplanet candidates efficiently. It allows users to upload or edit exoplanet datasets and run a machine learning model to identify confirmed planets, potential candidates, or false positives.
         </p>
-        <div className="buttonContainer">
-          <Link href="https://github.com/Wizxrdx/nasa-space-apps-2025" target="_blank" rel="noopener noreferrer" className="code">Code</Link>
-          <Link href="https://www.youtube.com/watch?v=5agHeSbKPbs" target="_blank" rel="noopener noreferrer" className="youtube">Demo</Link>
-          <Link href="https://dev.wizxrdx.me/nasa-space-apps-2025" target="_blank" rel="noopener noreferrer" className="visit">Visit</Link>
+        <div className={projectButtonStyles.buttonContainer}>
+          <CodeButton href="https://github.com/Wizxrdx/nasa-space-apps-2025" />
+          <DemoButton href="https://www.youtube.com/watch?v=5agHeSbKPbs" />
+          <VisitButton href="https://dev.wizxrdx.me/nasa-space-apps-2025" />
         </div>
         <SlidingPicture />
       </div>

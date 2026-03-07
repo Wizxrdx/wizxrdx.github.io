@@ -43,11 +43,33 @@
     justify-content: right;
 }
 .navLink {
+    position: relative;
+    display: inline-block;
     text-decoration: none;
     font-size: 1rem;
+    padding-bottom: 0.2rem;
+    transition: color 0.3s ease;
+}
+
+.navLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #3f3f3f;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
 }
 .navLink:hover, .navLinkActive {
     color: #1b1b1b;
+}
+
+.navLink:hover::after,
+.navLinkActive::after {
+    transform: scaleX(1);
 }
 .hamburger {
     display: none; /* Hidden by default, shown on mobile via media query */
@@ -83,5 +105,9 @@
     .navLink {
         font-size: 1.2rem;
         margin-right: 1rem;
+    }
+
+    .navLink::after {
+        transform-origin: right;
     }
 }

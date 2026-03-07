@@ -28,6 +28,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${ibmPlexSans.variable} ${newsreader.variable}`}>
       <head>
+        <Script id="disable-scroll-restoration" strategy="beforeInteractive">
+          {`(function(){
+            if ('scrollRestoration' in history) {
+              history.scrollRestoration = 'manual';
+            }
+
+            window.scrollTo(0, 0);
+
+            window.addEventListener('pageshow', function () {
+              window.scrollTo(0, 0);
+            });
+          })();`}
+        </Script>
         <link rel="dns-prefetch" href="https://cdn.credly.com" />
         <link rel="preconnect" href="https://cdn.credly.com" />
         <link rel="preconnect" href="https://img.youtube.com" />

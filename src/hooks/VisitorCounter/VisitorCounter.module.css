@@ -1,0 +1,16 @@
+.footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.footerText {
+    display: inline-block;
+    min-width: 18ch;
+    min-height: 1.3em;
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+    font-variant-numeric: tabular-nums;
+}

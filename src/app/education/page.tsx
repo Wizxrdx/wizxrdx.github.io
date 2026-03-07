@@ -11,7 +11,14 @@ export default function EducationPage() {
 
             <div className={`${styles.itemContainer} glass-card`}>
                 <div className={styles.itemHeaderContainer}>
-                    <img className={styles.itemHeaderLogo} src="/TIP.png" alt="T.I.P logo" />
+                    <img
+                        className={styles.itemHeaderLogo}
+                        src="/TIP.png"
+                        alt="T.I.P logo"
+                        width={300}
+                        height={200}
+                        decoding="async"
+                    />
                     <div className={styles.itemHeaderText}>
                         <h3>
                             Technological Institute of the Philippines
@@ -41,7 +48,14 @@ export default function EducationPage() {
 
             <div className={`${styles.itemContainer} glass-card`}>
                 <div className={styles.itemHeaderContainer}>
-                    <img className={styles.itemHeaderLogo} src="/aitech.png" alt="AiTECH logo" />
+                    <img
+                        className={styles.itemHeaderLogo}
+                        src="/aitech.png"
+                        alt="AiTECH logo"
+                        width={300}
+                        height={200}
+                        decoding="async"
+                    />
                     <div className={styles.itemHeaderText}>
                         <h3>
                             Antipolo Institute of Technology

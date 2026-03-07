@@ -2,6 +2,14 @@
 import { useEffect, useRef } from 'react';
 import styles from './Background.module.css';
 
+type Neuron = {
+    x: number;
+    y: number;
+    radius: number;
+    dx: number;
+    dy: number;
+};
+
 export default function Background() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -11,22 +19,41 @@ export default function Background() {
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
 
-        let neurons: { x: number; y: number; radius: number; dx: number; dy: number; }[] = [];
+        let neurons: Neuron[] = [];
         const maxDistance = 100;
+        const maxDistanceSquared = maxDistance * maxDistance;
+        let viewWidth = 0;
+        let viewHeight = 0;
+        let animationId = 0;
+        let resizeTimeoutId: number | null = null;
+        let unlockResizeTimeoutId: number | null = null;
+        let allowResize = false;
+
+        const applyCanvasSize = () => {
+            viewWidth = Math.max(1, Math.round(window.innerWidth));
+            viewHeight = Math.max(1, Math.round(window.innerHeight));
+
+            const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+            canvas.width = Math.max(1, Math.floor(viewWidth * dpr));
+            canvas.height = Math.max(1, Math.floor(viewHeight * dpr));
+            canvas.style.width = `${viewWidth}px`;
+            canvas.style.height = `${viewHeight}px`;
+
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+            ctx.scale(dpr, dpr);
+        };
 
         const resizeCanvas = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight; // Fixed viewport height
+            applyCanvasSize();
 
-            const area = canvas.width * canvas.height;
-            const targetNeurons = Math.floor(area / 8000); // Consistent density
+            const area = viewWidth * viewHeight;
+            const targetNeurons = Math.max(16, Math.min(96, Math.floor(area / 12000)));
 
-            // Adjust neuron count without losing existing ones
             if (neurons.length < targetNeurons) {
                 for (let i = neurons.length; i < targetNeurons; i++) {
                     neurons.push({
-                        x: Math.random() * canvas.width,
-                        y: Math.random() * canvas.height,
+                        x: Math.random() * viewWidth,
+                        y: Math.random() * viewHeight,
                         radius: 3,
                         dx: (Math.random() - 0.5) * 0.4,
                         dy: (Math.random() - 0.5) * 0.4
@@ -37,21 +64,46 @@ export default function Background() {
             }
         };
 
-        window.addEventListener('resize', resizeCanvas);
+        const requestResize = () => {
+            if (!allowResize) return;
+
+            if (resizeTimeoutId !== null) {
+                window.clearTimeout(resizeTimeoutId);
+            }
+            resizeTimeoutId = window.setTimeout(() => {
+                const nextWidth = Math.max(1, Math.round(window.innerWidth));
+                const nextHeight = Math.max(1, Math.round(window.innerHeight));
+
+                const widthChanged = nextWidth !== viewWidth;
+                const heightChangedSignificantly = Math.abs(nextHeight - viewHeight) > 120;
+
+                // Ignore tiny height oscillations from browser UI chrome changes.
+                if (widthChanged || heightChangedSignificantly) {
+                    resizeCanvas();
+                }
+                resizeTimeoutId = null;
+            }, 100);
+        };
+
+        window.addEventListener('resize', requestResize, { passive: true });
         resizeCanvas();
 
-        let animationId: number;
-        const animate = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Prevent first-load resize bursts from causing visible up/down jitter.
+        unlockResizeTimeoutId = window.setTimeout(() => {
+            allowResize = true;
+        }, 1200);
 
-            // Draw connections
+        const animate = () => {
+            ctx.clearRect(0, 0, viewWidth, viewHeight);
+
             for (let i = 0; i < neurons.length; i++) {
                 for (let j = i + 1; j < neurons.length; j++) {
                     const dx = neurons[i].x - neurons[j].x;
                     const dy = neurons[i].y - neurons[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    const distanceSquared = dx * dx + dy * dy;
 
-                    if (distance < maxDistance) {
+                    if (distanceSquared < maxDistanceSquared) {
+                        const distance = Math.sqrt(distanceSquared);
                         ctx.beginPath();
                         ctx.moveTo(neurons[i].x, neurons[i].y);
                         ctx.lineTo(neurons[j].x, neurons[j].y);
@@ -62,7 +114,6 @@ export default function Background() {
                 }
             }
 
-            // Draw & move neurons
             neurons.forEach((neuron) => {
                 ctx.beginPath();
                 ctx.arc(neuron.x, neuron.y, neuron.radius, 0, Math.PI * 2);
@@ -72,13 +123,11 @@ export default function Background() {
                 neuron.x += neuron.dx;
                 neuron.y += neuron.dy;
 
-                // Bounce off walls (using current canvas size)
-                if (neuron.x < 0 || neuron.x > canvas.width) neuron.dx *= -1;
-                if (neuron.y < 0 || neuron.y > canvas.height) neuron.dy *= -1;
+                if (neuron.x < 0 || neuron.x > viewWidth) neuron.dx *= -1;
+                if (neuron.y < 0 || neuron.y > viewHeight) neuron.dy *= -1;
 
-                // Keep them within bounds if the window shrinks suddenly
-                neuron.x = Math.max(0, Math.min(neuron.x, canvas.width));
-                neuron.y = Math.max(0, Math.min(neuron.y, canvas.height));
+                neuron.x = Math.max(0, Math.min(neuron.x, viewWidth));
+                neuron.y = Math.max(0, Math.min(neuron.y, viewHeight));
             });
 
             animationId = requestAnimationFrame(animate);
@@ -87,7 +136,14 @@ export default function Background() {
         animate();
 
         return () => {
-            window.removeEventListener('resize', resizeCanvas);
+            window.removeEventListener('resize', requestResize);
+
+            if (resizeTimeoutId !== null) {
+                window.clearTimeout(resizeTimeoutId);
+            }
+            if (unlockResizeTimeoutId !== null) {
+                window.clearTimeout(unlockResizeTimeoutId);
+            }
             cancelAnimationFrame(animationId);
         };
     }, []);

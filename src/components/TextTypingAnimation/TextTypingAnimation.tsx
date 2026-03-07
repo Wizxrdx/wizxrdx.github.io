@@ -44,8 +44,8 @@ export default function TextTypingAnimation({ text }: { text: string[] }) {
   }, [currentText, isDeleting, currentWord, text, typingSpeed]);
 
   return (
-    <span className={style.textTypingAnimation}>
-      {currentText}
+    <span className={style.typingSlot}>
+      <span className={style.textTypingAnimation}>{currentText}</span>
     </span>
   );
-}
+} 

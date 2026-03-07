@@ -7,6 +7,10 @@ body {
   height: 100%;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 .glass-card {
   background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
   backdrop-filter: blur(10px); /* Frosted glass effect */
@@ -30,7 +34,7 @@ nav ul {
 .layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure the layout takes up the full height of the viewport */
+  min-height: 100svh;
 }
 
 a {
@@ -51,6 +55,7 @@ img {
   margin-bottom: 1rem;
   max-width: 200px;
   width: 15vw;
+  height: auto;
   object-fit: cover;
 }
 
