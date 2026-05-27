@@ -4,6 +4,7 @@ import Link from 'next/link';
 import SlidingPicture from '@/components/SlidingPicture/SlidingPicture';
 import ProjectButton from '@/shared/ui/ProjectButton/ProjectButton';
 import ProjectButtonGroup from '@/shared/ui/ProjectButton/ProjectButtonGroup';
+import Card from '@/shared/ui/Card/Card';
 
 export default function AboutPage() {
   return (
@@ -27,7 +28,7 @@ export default function AboutPage() {
             decoding="async"
           />
 
-          <div className={`${styles.profileContents} ${'glass-card'}`}>
+          <Card className={styles.profileContents}>
             <Link href='mailto:benedick.dumol@gmail.com'>
               benedick.dumol@gmail.com
             </Link>
@@ -43,7 +44,7 @@ export default function AboutPage() {
             <Link href='https://twitter.com/benlabbao' target='_blank' rel='noopener noreferrer'>
               X (Twitter)
             </Link>
-          </div>
+          </Card>
         </div>
         <p className={styles.sectionBody}>
           Hello! I&apos;m <b>Benedick Labbao</b>, an aspiring <b>Machine Learning Engineer</b> and <b>Full-Stack Developer</b>.
@@ -61,7 +62,7 @@ export default function AboutPage() {
           You can reach me out via email at <b>benedick.dumol@gmail.com</b> or any of my social media accounts.</p>
       </article>
 
-      <div className={`${styles.feature} ${'glass-card'}`}>
+      <Card className={styles.feature}>
         <h2>My Latest Project</h2>
         <h3>Hybrid Exoplanet Recognition and Model Evaluation System - HERMES</h3>
         <p>
@@ -73,7 +74,7 @@ export default function AboutPage() {
           <ProjectButton variant="visit" href="https://dev.wizxrdx.me/nasa-space-apps-2025" />
         </ProjectButtonGroup>
         <SlidingPicture />
-      </div>
+      </Card>
     </div>
   );
 }
