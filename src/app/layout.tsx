@@ -2,7 +2,7 @@ import Script from "next/script";
 import "../styles/globals.css";
 import "../styles/embla.css";
 import Background from "../shared/ui/Background/Background";
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../shared/layout/Navbar/Navbar";
 import Footer from "../shared/layout/Footer/Footer";
 
 import { IBM_Plex_Sans, Newsreader } from 'next/font/google'
