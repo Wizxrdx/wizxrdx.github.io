@@ -1,5 +1,5 @@
 import styles from './page.module.css';
-import YouTubeEmbed from '../../lib/YouTubeEmbed';
+import YouTubeEmbed from '@/shared/ui/YouTubeEmbed/YouTubeEmbed';
 import ProjectButton from '@/shared/ui/ProjectButton/ProjectButton';
 import ProjectButtonGroup from '@/shared/ui/ProjectButton/ProjectButtonGroup';
 
