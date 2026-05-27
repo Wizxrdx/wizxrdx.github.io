@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import "../styles/embla.css";
 import Background from "../shared/ui/Background/Background";
 import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
+import Footer from "../shared/layout/Footer/Footer";
 
 import { IBM_Plex_Sans, Newsreader } from 'next/font/google'
 const ibmPlexSans = IBM_Plex_Sans({
