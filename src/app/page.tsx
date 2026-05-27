@@ -2,10 +2,8 @@ import TextWritingAnimation from '@/components/TextTypingAnimation/TextTypingAni
 import styles from './page.module.css'
 import Link from 'next/link';
 import SlidingPicture from '@/components/SlidingPicture/SlidingPicture';
-import CodeButton from '@/components/ProjectButtons/CodeButton';
-import DemoButton from '@/components/ProjectButtons/DemoButton';
-import VisitButton from '@/components/ProjectButtons/VisitButton';
-import projectButtonStyles from '@/components/ProjectButtons/ProjectButtons.module.css';
+import ProjectButton from '@/shared/ui/ProjectButton/ProjectButton';
+import ProjectButtonGroup from '@/shared/ui/ProjectButton/ProjectButtonGroup';
 
 export default function AboutPage() {
   return (
@@ -69,11 +67,11 @@ export default function AboutPage() {
         <p>
           HERMES is a web application designed for the NASA Space Apps Challenge 2025, helping users classify exoplanet candidates efficiently. It allows users to upload or edit exoplanet datasets and run a machine learning model to identify confirmed planets, potential candidates, or false positives.
         </p>
-        <div className={projectButtonStyles.buttonContainer}>
-          <CodeButton href="https://github.com/Wizxrdx/nasa-space-apps-2025" />
-          <DemoButton href="https://www.youtube.com/watch?v=5agHeSbKPbs" />
-          <VisitButton href="https://dev.wizxrdx.me/nasa-space-apps-2025" />
-        </div>
+        <ProjectButtonGroup>
+          <ProjectButton variant="code" href="https://github.com/Wizxrdx/nasa-space-apps-2025" />
+          <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=5agHeSbKPbs" />
+          <ProjectButton variant="visit" href="https://dev.wizxrdx.me/nasa-space-apps-2025" />
+        </ProjectButtonGroup>
         <SlidingPicture />
       </div>
     </div>

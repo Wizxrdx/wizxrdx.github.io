@@ -1,6 +1,5 @@
 import Script from "next/script";
 import "../styles/globals.css";
-import "../styles/buttons.css";
 import "../styles/embla.css";
 import Background from "../components/Background/Background";
 import Navbar from "../components/Navbar/Navbar";
