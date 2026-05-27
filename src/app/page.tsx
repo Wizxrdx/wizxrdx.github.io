@@ -1,4 +1,4 @@
-import TextWritingAnimation from '@/components/TextTypingAnimation/TextTypingAnimation';
+import TextWritingAnimation from '@/shared/ui/TextTypingAnimation/TextTypingAnimation';
 import styles from './page.module.css'
 import Link from 'next/link';
 import SlidingPicture from '@/components/SlidingPicture/SlidingPicture';
