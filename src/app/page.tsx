@@ -5,6 +5,7 @@ import SlidingPicture from '@/shared/ui/SlidingPicture/SlidingPicture';
 import ProjectButton from '@/shared/ui/ProjectButton/ProjectButton';
 import ProjectButtonGroup from '@/shared/ui/ProjectButton/ProjectButtonGroup';
 import Card from '@/shared/ui/Card/Card';
+import Section from '@/shared/ui/Section/Section';
 
 export default function AboutPage() {
   return (
@@ -17,7 +18,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <article className={styles.section}>
+      <Section as="article" className={styles.section}>
         <div className={styles.profile}>
           <img
             className={styles.profileImage}
@@ -60,7 +61,7 @@ export default function AboutPage() {
         </p>
         <p className={styles.sectionBody}>
           You can reach me out via email at <b>benedick.dumol@gmail.com</b> or any of my social media accounts.</p>
-      </article>
+      </Section>
 
       <Card className={styles.feature}>
         <h2>My Latest Project</h2>
