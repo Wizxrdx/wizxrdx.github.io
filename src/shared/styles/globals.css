@@ -1,5 +1,5 @@
-@import "../shared/styles/tokens.css";
-@import "../shared/styles/theme.css";
+@import "./tokens.css";
+@import "./theme.css";
 
 html,
 body {
@@ -12,17 +12,6 @@ body {
 
 html {
   scrollbar-gutter: stable;
-}
-
-.glass-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--glass-shadow);
-  color: var(--glass-text);
-  text-align: center;
 }
 
 section {
@@ -120,4 +109,25 @@ li {
     max-width: var(--content-max);
     margin: 0;
   }
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  text-align: center;
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.embla__slide img {
+  text-align: center;
+  margin: 0 auto;
+  object-fit: cover;
+  max-width: 95%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
 }

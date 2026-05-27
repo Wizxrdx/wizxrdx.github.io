@@ -1,6 +1,5 @@
 import Script from "next/script";
-import "../styles/globals.css";
-import "../styles/embla.css";
+import "../shared/styles/globals.css";
 import Background from "../shared/ui/Background/Background";
 import Navbar from "../shared/layout/Navbar/Navbar";
 import Footer from "../shared/layout/Footer/Footer";

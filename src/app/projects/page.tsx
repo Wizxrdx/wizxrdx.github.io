@@ -2,6 +2,7 @@ import styles from './page.module.css';
 import YouTubeEmbed from '@/shared/ui/YouTubeEmbed/YouTubeEmbed';
 import ProjectButton from '@/shared/ui/ProjectButton/ProjectButton';
 import ProjectButtonGroup from '@/shared/ui/ProjectButton/ProjectButtonGroup';
+import Card from '@/shared/ui/Card/Card';
 
 export default function ProjectsPage() {
     return (
@@ -13,7 +14,7 @@ export default function ProjectsPage() {
             </div>
             <div className={styles.itemContainer}>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <YouTubeEmbed videoId="5agHeSbKPbs" title="Hybrid Exoplanet Recognition and Model Evaluation System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Hybrid Exoplanet Recognition and Model Evaluation System - HERMES</h4>
@@ -45,9 +46,9 @@ export default function ProjectsPage() {
                             <ProjectButton variant="visit" href="https://dev.wizxrdx.me/nasa-space-apps-2025" />
                         </ProjectButtonGroup>
                     </div>
-                </div>
+                </Card>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <YouTubeEmbed videoId="SsIo-v1et94" title="Smart Packaging Control & Demand Forecasting Web Application" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Smart Packaging Control & Demand Forecasting Web Application</h4>
@@ -78,9 +79,9 @@ export default function ProjectsPage() {
                             <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=SsIo-v1et94" />
                         </ProjectButtonGroup>
                     </div>
-                </div>
+                </Card>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <YouTubeEmbed videoId="ZG2r1KPy5RM" title="AI-Powered Mosquito Monitoring System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >AI-Powered Mosquito Monitoring System</h4>
@@ -111,9 +112,9 @@ export default function ProjectsPage() {
                             <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=ZG2r1KPy5RM" />
                         </ProjectButtonGroup>
                     </div>
-                </div>
+                </Card>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <YouTubeEmbed videoId="PGDNyjjESfA" title="Hybrid Exoplanet Recognition and Model Evaluation System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Automated Remote Geospatial User Service - ARGUS</h4>
@@ -141,9 +142,9 @@ export default function ProjectsPage() {
                             <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=PGDNyjjESfA" />
                         </ProjectButtonGroup>
                     </div>
-                </div>
+                </Card>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <img
                         className={styles.itemImagePreview}
                         src="/image1.png"
@@ -182,9 +183,9 @@ export default function ProjectsPage() {
                             <ProjectButton variant="paper" href="https://github.com/Wizxrdx/Project_Exercise_Posture_Correction/blob/main/Research_Paper/Mendoza_Labbao_Final_Project_DATA_SCI.pdf" />
                         </ProjectButtonGroup>
                     </div>
-                </div>
+                </Card>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <img
                         className={styles.itemImagePreview}
                         src="/image2.png"
@@ -218,7 +219,7 @@ export default function ProjectsPage() {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </Card>
 
             </div>
         </div>
