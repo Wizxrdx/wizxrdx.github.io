@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
-import VisitorCounter from "@/hooks/VisitorCounter";
+import VisitorCounter from "@/shared/ui/VisitorCounter/VisitorCounter";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareGithub, faLinkedin, faXTwitter, faKaggle } from "@fortawesome/free-brands-svg-icons";
