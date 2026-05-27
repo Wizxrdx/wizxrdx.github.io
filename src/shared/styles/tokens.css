@@ -1,0 +1,18 @@
+:root {
+	--font-sans: "IBM Plex Sans", sans-serif;
+	--font-serif: "Newsreader", serif;
+	--line-base: 1.8;
+
+	--text-xs: 0.7rem;
+	--text-sm: 0.8rem;
+	--text-md: 1rem;
+	--text-lg: 1.5rem;
+	--text-xl: 2rem;
+
+	--radius-md: 15px;
+	--shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+	--content-max: 1080px;
+	--content-margin: 2rem;
+	--layout-min-height: 100svh;
+}
