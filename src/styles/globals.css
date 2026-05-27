@@ -1,9 +1,12 @@
+@import "../shared/styles/tokens.css";
+@import "../shared/styles/theme.css";
+
 html,
 body {
-  font-family: IBM Plex Sans, sans-serif;
+  font-family: var(--font-sans);
   margin: 0;
   padding: 0;
-  line-height: 1.8;
+  line-height: var(--line-base);
   height: 100%;
 }
 
@@ -12,14 +15,14 @@ html {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  color: #000; /* Text color */
-  text-align: center; /* Center-align text */
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--glass-shadow);
+  color: var(--glass-text);
+  text-align: center;
 }
 
 section {
@@ -34,20 +37,20 @@ nav ul {
 .layout {
   display: flex;
   flex-direction: column;
-  min-height: 100svh;
+  min-height: var(--layout-min-height);
 }
 
 a {
-  font-size: 0.7rem;
-  color: gray;
+  font-size: var(--text-xs);
+  color: var(--color-link);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .content {
   flex: 1; /* Push the footer to the bottom */
-  max-width: 1080px;
-  margin: 2rem auto;
+  max-width: var(--content-max);
+  margin: var(--content-margin) auto;
   width: 100%;
 }
 
@@ -60,40 +63,40 @@ img {
 }
 
 p {
-  font-size: 0.8rem;
-  color: #444;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
 }
 
 span {
-  font-size: 0.8rem;
-  color: #444;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: var(--text-xl);
   font-weight: normal;
-  color: #222;
+  color: var(--color-text);
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: var(--text-lg);
   font-weight: normal;
   margin: 0;
-  color: #222;
+  color: var(--color-text);
 }
 
 h3 {
   font-size: 1.2rem;
   font-weight: normal;
   margin: 0;
-  color: #222;
+  color: var(--color-text);
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: var(--text-md);
   font-weight: normal;
   margin: 0;
-  color: #222;
+  color: var(--color-text);
 }
 
 ul {
@@ -101,20 +104,20 @@ ul {
     padding: 0 0 0 1.2rem;
 
     &::marker {
-        color: #888;
+    color: var(--color-marker);
         margin: 0;
     }
 }
 
 li {
-  font-size: 0.8rem;
-  color: #555;
+  font-size: var(--text-sm);
+  color: var(--color-subtle);
 }
 
 @media (max-width: 768px) {
     .content {
     flex: 1; /* Push the footer to the bottom */
-    max-width: 1080px;
+    max-width: var(--content-max);
     margin: 0;
   }
 }
