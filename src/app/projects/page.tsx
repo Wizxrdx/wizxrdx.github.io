@@ -1,10 +1,8 @@
 import styles from './page.module.css';
-import YouTubeEmbed from '../../lib/YouTubeEmbed';
-import CodeButton from '@/components/ProjectButtons/CodeButton';
-import DemoButton from '@/components/ProjectButtons/DemoButton';
-import VisitButton from '@/components/ProjectButtons/VisitButton';
-import PaperButton from '@/components/ProjectButtons/PaperButton';
-import projectButtonStyles from '@/components/ProjectButtons/ProjectButtons.module.css';
+import YouTubeEmbed from '@/shared/ui/YouTubeEmbed/YouTubeEmbed';
+import ProjectButton from '@/shared/ui/ProjectButton/ProjectButton';
+import ProjectButtonGroup from '@/shared/ui/ProjectButton/ProjectButtonGroup';
+import Card from '@/shared/ui/Card/Card';
 
 export default function ProjectsPage() {
     return (
@@ -16,7 +14,7 @@ export default function ProjectsPage() {
             </div>
             <div className={styles.itemContainer}>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <YouTubeEmbed videoId="5agHeSbKPbs" title="Hybrid Exoplanet Recognition and Model Evaluation System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Hybrid Exoplanet Recognition and Model Evaluation System - HERMES</h4>
@@ -42,15 +40,15 @@ export default function ProjectsPage() {
                                 <li>Web-Based Interface</li>
                             </ul>
                         </div>
-                        <div className={projectButtonStyles.buttonContainer}>
-                            <CodeButton href="https://github.com/Wizxrdx/nasa-space-apps-2025" />
-                            <DemoButton href="https://www.youtube.com/watch?v=5agHeSbKPbs" />
-                            <VisitButton href="https://dev.wizxrdx.me/nasa-space-apps-2025" />
-                        </div>
+                        <ProjectButtonGroup>
+                            <ProjectButton variant="code" href="https://github.com/Wizxrdx/nasa-space-apps-2025" />
+                            <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=5agHeSbKPbs" />
+                            <ProjectButton variant="visit" href="https://dev.wizxrdx.me/nasa-space-apps-2025" />
+                        </ProjectButtonGroup>
                     </div>
-                </div>
+                </Card>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <YouTubeEmbed videoId="SsIo-v1et94" title="Smart Packaging Control & Demand Forecasting Web Application" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Smart Packaging Control & Demand Forecasting Web Application</h4>
@@ -76,14 +74,14 @@ export default function ProjectsPage() {
                                 <li>Data-driven optimization of packaging workflow and production tracking</li>
                             </ul>
                         </div>
-                        <div className={projectButtonStyles.buttonContainer}>
-                            <CodeButton href="https://github.com/Wizxrdx/charcoal-forecasting-app" />
-                            <DemoButton href="https://www.youtube.com/watch?v=SsIo-v1et94" />
-                        </div>
+                        <ProjectButtonGroup>
+                            <ProjectButton variant="code" href="https://github.com/Wizxrdx/charcoal-forecasting-app" />
+                            <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=SsIo-v1et94" />
+                        </ProjectButtonGroup>
                     </div>
-                </div>
+                </Card>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <YouTubeEmbed videoId="ZG2r1KPy5RM" title="AI-Powered Mosquito Monitoring System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >AI-Powered Mosquito Monitoring System</h4>
@@ -109,14 +107,14 @@ export default function ProjectsPage() {
                                 <li>Mobile app alerts and monitoring</li>
                             </ul>
                         </div>
-                        <div className={projectButtonStyles.buttonContainer}>
-                            <CodeButton href="https://github.com/Wizxrdx/mosquito-detection" />
-                            <DemoButton href="https://www.youtube.com/watch?v=ZG2r1KPy5RM" />
-                        </div>
+                        <ProjectButtonGroup>
+                            <ProjectButton variant="code" href="https://github.com/Wizxrdx/mosquito-detection" />
+                            <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=ZG2r1KPy5RM" />
+                        </ProjectButtonGroup>
                     </div>
-                </div>
+                </Card>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <YouTubeEmbed videoId="PGDNyjjESfA" title="Hybrid Exoplanet Recognition and Model Evaluation System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Automated Remote Geospatial User Service - ARGUS</h4>
@@ -139,14 +137,14 @@ export default function ProjectsPage() {
                                 <li>Integration of imagery and scheduling information for easy planning</li>
                             </ul>
                         </div>
-                        <div className={projectButtonStyles.buttonContainer}>
-                            <CodeButton href="https://github.com/Wizxrdx/nasa-space-apps-2024" />
-                            <DemoButton href="https://www.youtube.com/watch?v=PGDNyjjESfA" />
-                        </div>
+                        <ProjectButtonGroup>
+                            <ProjectButton variant="code" href="https://github.com/Wizxrdx/nasa-space-apps-2024" />
+                            <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=PGDNyjjESfA" />
+                        </ProjectButtonGroup>
                     </div>
-                </div>
+                </Card>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <img
                         className={styles.itemImagePreview}
                         src="/image1.png"
@@ -180,14 +178,14 @@ export default function ProjectsPage() {
                                 <li>Interactive Unity interface for feedback and posture visualization</li>
                             </ul>
                         </div>
-                        <div className={projectButtonStyles.buttonContainer}>
-                            <CodeButton href="https://github.com/Wizxrdx/Project_Exercise_Posture_Correction/" />
-                            <PaperButton href="https://github.com/Wizxrdx/Project_Exercise_Posture_Correction/blob/main/Research_Paper/Mendoza_Labbao_Final_Project_DATA_SCI.pdf" />
-                        </div>
+                        <ProjectButtonGroup>
+                            <ProjectButton variant="code" href="https://github.com/Wizxrdx/Project_Exercise_Posture_Correction/" />
+                            <ProjectButton variant="paper" href="https://github.com/Wizxrdx/Project_Exercise_Posture_Correction/blob/main/Research_Paper/Mendoza_Labbao_Final_Project_DATA_SCI.pdf" />
+                        </ProjectButtonGroup>
                     </div>
-                </div>
+                </Card>
 
-                <div className={`${styles.item} ${'glass-card'}`}>
+                <Card className={styles.item}>
                     <img
                         className={styles.itemImagePreview}
                         src="/image2.png"
@@ -221,7 +219,7 @@ export default function ProjectsPage() {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </Card>
 
             </div>
         </div>

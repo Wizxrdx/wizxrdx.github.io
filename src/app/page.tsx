@@ -1,11 +1,11 @@
-import TextWritingAnimation from '@/components/TextTypingAnimation/TextTypingAnimation';
+import TextWritingAnimation from '@/shared/ui/TextTypingAnimation/TextTypingAnimation';
 import styles from './page.module.css'
 import Link from 'next/link';
-import SlidingPicture from '@/components/SlidingPicture/SlidingPicture';
-import CodeButton from '@/components/ProjectButtons/CodeButton';
-import DemoButton from '@/components/ProjectButtons/DemoButton';
-import VisitButton from '@/components/ProjectButtons/VisitButton';
-import projectButtonStyles from '@/components/ProjectButtons/ProjectButtons.module.css';
+import SlidingPicture from '@/shared/ui/SlidingPicture/SlidingPicture';
+import ProjectButton from '@/shared/ui/ProjectButton/ProjectButton';
+import ProjectButtonGroup from '@/shared/ui/ProjectButton/ProjectButtonGroup';
+import Card from '@/shared/ui/Card/Card';
+import Section from '@/shared/ui/Section/Section';
 
 export default function AboutPage() {
   return (
@@ -18,7 +18,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <article className={styles.section}>
+      <Section as="article" className={styles.section}>
         <div className={styles.profile}>
           <img
             className={styles.profileImage}
@@ -29,7 +29,7 @@ export default function AboutPage() {
             decoding="async"
           />
 
-          <div className={`${styles.profileContents} ${'glass-card'}`}>
+          <Card className={styles.profileContents}>
             <Link href='mailto:benedick.dumol@gmail.com'>
               benedick.dumol@gmail.com
             </Link>
@@ -45,7 +45,7 @@ export default function AboutPage() {
             <Link href='https://twitter.com/benlabbao' target='_blank' rel='noopener noreferrer'>
               X (Twitter)
             </Link>
-          </div>
+          </Card>
         </div>
         <p className={styles.sectionBody}>
           Hello! I&apos;m <b>Benedick Labbao</b>, an aspiring <b>Machine Learning Engineer</b> and <b>Full-Stack Developer</b>.
@@ -61,21 +61,21 @@ export default function AboutPage() {
         </p>
         <p className={styles.sectionBody}>
           You can reach me out via email at <b>benedick.dumol@gmail.com</b> or any of my social media accounts.</p>
-      </article>
+      </Section>
 
-      <div className={`${styles.feature} ${'glass-card'}`}>
+      <Card className={styles.feature}>
         <h2>My Latest Project</h2>
         <h3>Hybrid Exoplanet Recognition and Model Evaluation System - HERMES</h3>
         <p>
           HERMES is a web application designed for the NASA Space Apps Challenge 2025, helping users classify exoplanet candidates efficiently. It allows users to upload or edit exoplanet datasets and run a machine learning model to identify confirmed planets, potential candidates, or false positives.
         </p>
-        <div className={projectButtonStyles.buttonContainer}>
-          <CodeButton href="https://github.com/Wizxrdx/nasa-space-apps-2025" />
-          <DemoButton href="https://www.youtube.com/watch?v=5agHeSbKPbs" />
-          <VisitButton href="https://dev.wizxrdx.me/nasa-space-apps-2025" />
-        </div>
+        <ProjectButtonGroup>
+          <ProjectButton variant="code" href="https://github.com/Wizxrdx/nasa-space-apps-2025" />
+          <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=5agHeSbKPbs" />
+          <ProjectButton variant="visit" href="https://dev.wizxrdx.me/nasa-space-apps-2025" />
+        </ProjectButtonGroup>
         <SlidingPicture />
-      </div>
+      </Card>
     </div>
   );
 }

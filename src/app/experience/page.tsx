@@ -1,4 +1,5 @@
 import styles from './page.module.css'
+import Card from '@/shared/ui/Card/Card';
 
 export default function ExperiencePage() {
     return (
@@ -9,7 +10,7 @@ export default function ExperiencePage() {
                 <p className={styles.headerBody}>Here are some of my professional experiences and work history</p>
             </div>
 
-            <div className={`${styles.item} ${'glass-card'}`}>
+            <Card className={styles.item}>
                 <div className={styles.itemHeader}>
                     <img
                         className={styles.itemHeaderLogo}
@@ -44,9 +45,9 @@ export default function ExperiencePage() {
                         <span>Twilio</span> <span>Digital Ocean</span> <span>Amazon Web Services</span> <span>React.js</span> <span>Node.js</span> <span>Python</span> <span>Trello</span> <span>GitHub</span> <span>Communication</span> <span>Teamwork</span> <span>Adaptability</span>
                     </div>
                 </div>
-            </div>
+            </Card>
 
-            <div className={`${styles.item} ${'glass-card'}`}>
+            <Card className={styles.item}>
                 <div className={styles.itemHeader}>
                     <img
                         className={styles.itemHeaderLogo}
@@ -80,9 +81,9 @@ export default function ExperiencePage() {
                         <span>Excel</span> <span>Data Entry</span> <span>Communication</span> <span>Teamwork</span> <span>Adaptability</span>
                     </div>
                 </div>
-            </div>
+            </Card>
 
-            <div className={`${styles.item} ${'glass-card'}`}>
+            <Card className={styles.item}>
                 <div className={styles.itemHeader}>
                     <img
                         className={styles.itemHeaderLogo}
@@ -116,7 +117,7 @@ export default function ExperiencePage() {
                         <span>Raspberry Pi</span> <span>Flask</span> <span>statsmodels</span> <span>pandas</span> <span>SQLite</span>
                     </div>
                 </div>
-            </div>
+            </Card>
         </div>
     )
 }

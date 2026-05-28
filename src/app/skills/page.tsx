@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import styles from './page.module.css';
 import CredlyBadge from '@/lib/CredlyBadge';
 import DataCampBadge from '@/lib/DataCampBadge';
+import Card from '@/shared/ui/Card/Card';
 
 export default function SkillsPage() {
     return (
@@ -14,7 +14,7 @@ export default function SkillsPage() {
 
             <div className={styles.skillsSetContainer}>
                 
-                <div className={`${styles.skillsSet} ${'glass-card'}`}>
+                <Card className={styles.skillsSet}>
                     <h4 className={styles.skillsSetTitle} >Programming Languages</h4>
                     <span>Python</span>
                     <span>TypeScript</span>
@@ -23,9 +23,9 @@ export default function SkillsPage() {
                     <span>PHP</span>
                     <span>C++</span>
                     <span>SQL</span>
-                </div>
+                </Card>
 
-                <div className={`${styles.skillsSet} ${'glass-card'}`}>
+                <Card className={styles.skillsSet}>
                     <h4 className={styles.skillsSetTitle} >Machine Learning & Deep Learning</h4>
                     <span>Google AutoML</span>
                     <span>TensorFlow</span>
@@ -33,9 +33,9 @@ export default function SkillsPage() {
                     <span>Scikit-learn</span>
                     <span>OpenCV</span>
                     <span>YOLO</span>
-                </div>
+                </Card>
 
-                <div className={`${styles.skillsSet} ${'glass-card'}`}>
+                <Card className={styles.skillsSet}>
                     <h4 className={styles.skillsSetTitle} >Data Analysis & Visualization</h4>
                     <span>Pandas</span>
                     <span>NumPy</span>
@@ -43,9 +43,9 @@ export default function SkillsPage() {
                     <span>Seaborn</span>
                     <span>Statsmodels</span>
                     <span>SciPy</span>
-                </div>
+                </Card>
 
-                <div className={`${styles.skillsSet} ${'glass-card'}`}>
+                <Card className={styles.skillsSet}>
                     <h4 className={styles.skillsSetTitle} >APIs, Frameworks & Libraries</h4>
                     <span>Twilio API</span>
                     <span>Digital Ocean API</span>
@@ -58,9 +58,9 @@ export default function SkillsPage() {
                     <span>OpenAI</span>
                     <span>Selenium</span>
                     <span>Qiskit</span>
-                </div>
+                </Card>
 
-                <div className={`${styles.skillsSet} ${'glass-card'}`}>
+                <Card className={styles.skillsSet}>
                     <h4 className={styles.skillsSetTitle} >Tools & Technologies</h4>
                     <span>Twilio</span>
                     <span>Amazon Web Services</span>
@@ -71,9 +71,9 @@ export default function SkillsPage() {
                     <span>Docker</span>
                     <span>Postman</span>
                     <span>Firebase</span>
-                </div>
+                </Card>
 
-                <div className={`${styles.skillsSet} ${'glass-card'}`}>
+                <Card className={styles.skillsSet}>
                     <h4 className={styles.skillsSetTitle} >Soft Skills</h4>
                     <span>Efficient Execution</span>
                     <span>Fast Learner</span>
@@ -82,14 +82,14 @@ export default function SkillsPage() {
                     <span>Collaboration</span>
                     <span>Adaptability</span>
                     <span>Time Management</span>
-                </div>
+                </Card>
 
             </div>
 
             <div className={styles.header}>
                 <h1 className={styles.headerTitle}>Certifications & Badges</h1>
             </div>
-            <div className={`${styles.certificateContainer} ${'glass-card'}`}>
+            <Card className={styles.certificateContainer}>
                 <DataCampBadge badgeId='SQA0019944136022' image='https://media.datacamp.com/legacy/Certification/Badges%202024/outline/SQL_Associate_-_badge_with_outline.png' />
 
                 {/* DevNet Associate */}
@@ -105,7 +105,7 @@ export default function SkillsPage() {
                 {/* IT Essentials */}
                 <CredlyBadge badgeId='ef64b661-2e6b-42d4-8c58-33077c6570d2' />
 
-            </div>
+            </Card>
       </div>
     )
 }

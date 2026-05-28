@@ -1,0 +1,34 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.branding {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 0;
+}
+
+.socialLinks a:hover {
+  text-decoration: underline;
+}

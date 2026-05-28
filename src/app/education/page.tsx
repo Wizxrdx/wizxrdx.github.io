@@ -1,4 +1,5 @@
 import styles from './page.module.css';
+import Card from '@/shared/ui/Card/Card';
 
 export default function EducationPage() {
     return (
@@ -9,7 +10,7 @@ export default function EducationPage() {
                 <p className={styles.headerSubtitle}>Here is a summary of my educational background</p>
             </div>
 
-            <div className={`${styles.itemContainer} glass-card`}>
+            <Card className={styles.itemContainer}>
                 <div className={styles.itemHeaderContainer}>
                     <img
                         className={styles.itemHeaderLogo}
@@ -44,9 +45,9 @@ export default function EducationPage() {
                         <br/>(2024 - 2025) Microsoft Student Community - Member
                     </p>
                 </div>
-            </div>
+            </Card>
 
-            <div className={`${styles.itemContainer} glass-card`}>
+            <Card className={styles.itemContainer}>
                 <div className={styles.itemHeaderContainer}>
                     <img
                         className={styles.itemHeaderLogo}
@@ -75,7 +76,7 @@ export default function EducationPage() {
                         <br/>Pre-Calculus, Physics, Technical Drafting, General Chemistry, Earth Science
                     </p>
                 </div>
-            </div>
+            </Card>
 
         </div>
     )
