@@ -12,9 +12,9 @@ export default function SlidingPicture({ className }: SlidingPictureProps) {
 
   return (
     <div className={classes}>
-      <div className="embla" ref={emblaRef}>
-        <div className="embla__container">
-          <div className="embla__slide">
+      <div className={styles.embla} ref={emblaRef}>
+        <div className={styles.embla__container}>
+          <div className={styles.embla__slide}>
             <img
               src="https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/home_page_1.png"
               alt="HERMES home page screenshot"
@@ -24,7 +24,7 @@ export default function SlidingPicture({ className }: SlidingPictureProps) {
               decoding="async"
             />
           </div>
-          <div className="embla__slide">
+          <div className={styles.embla__slide}>
             <img
               src="https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/home_page_5.png"
               alt="HERMES home page details screenshot"
@@ -34,7 +34,7 @@ export default function SlidingPicture({ className }: SlidingPictureProps) {
               decoding="async"
             />
           </div>
-          <div className="embla__slide">
+          <div className={styles.embla__slide}>
             <img
               src="https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/classification_page.png"
               alt="HERMES classification page screenshot"
@@ -44,7 +44,7 @@ export default function SlidingPicture({ className }: SlidingPictureProps) {
               decoding="async"
             />
           </div>
-          <div className="embla__slide">
+          <div className={styles.embla__slide}>
             <img
               src="https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/data_page.png"
               alt="HERMES data page screenshot"
