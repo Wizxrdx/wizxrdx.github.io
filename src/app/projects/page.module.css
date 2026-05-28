@@ -118,3 +118,7 @@
         height: 150px;
     }
 }
+
+:target {
+    scroll-margin-top: 4rem;
+}

@@ -30,10 +30,14 @@ nav ul {
 }
 
 a {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--color-link);
   text-decoration: none;
   transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .content {

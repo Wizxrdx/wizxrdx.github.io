@@ -14,7 +14,7 @@ export default function ProjectsPage() {
             </div>
             <div className={styles.itemContainer}>
 
-                <Card className={styles.item}>
+                <Card className={styles.item} id="hermes">
                     <YouTubeEmbed videoId="5agHeSbKPbs" title="Hybrid Exoplanet Recognition and Model Evaluation System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Hybrid Exoplanet Recognition and Model Evaluation System - HERMES</h4>
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
                     </div>
                 </Card>
 
-                <Card className={styles.item}>
+                <Card className={styles.item} id="charcoal-forecasting-app">
                     <YouTubeEmbed videoId="SsIo-v1et94" title="Smart Packaging Control & Demand Forecasting Web Application" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Smart Packaging Control & Demand Forecasting Web Application</h4>
@@ -81,7 +81,7 @@ export default function ProjectsPage() {
                     </div>
                 </Card>
 
-                <Card className={styles.item}>
+                <Card className={styles.item} id="mosquito-monitoring-system">
                     <YouTubeEmbed videoId="ZG2r1KPy5RM" title="AI-Powered Mosquito Monitoring System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >AI-Powered Mosquito Monitoring System</h4>
@@ -114,7 +114,7 @@ export default function ProjectsPage() {
                     </div>
                 </Card>
 
-                <Card className={styles.item}>
+                <Card className={styles.item} id="argus">
                     <YouTubeEmbed videoId="PGDNyjjESfA" title="Hybrid Exoplanet Recognition and Model Evaluation System" className={styles.itemVideoPreview} />
                     <div className={styles.itemContent}>
                         <h4 className={styles.itemTitle} >Automated Remote Geospatial User Service - ARGUS</h4>
@@ -144,7 +144,7 @@ export default function ProjectsPage() {
                     </div>
                 </Card>
 
-                <Card className={styles.item}>
+                <Card className={styles.item} id="exercise-posture-suggestion-system">
                     <img
                         className={styles.itemImagePreview}
                         src="/image1.png"
@@ -185,7 +185,7 @@ export default function ProjectsPage() {
                     </div>
                 </Card>
 
-                <Card className={styles.item}>
+                <Card className={styles.item} id="covid-quarantine-prediction">
                     <img
                         className={styles.itemImagePreview}
                         src="/image2.png"
