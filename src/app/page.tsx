@@ -107,7 +107,7 @@ export default function AboutPage() {
         <h2>My Most Ambitious Project</h2>
         <h3>AI-Powered Mosquito Monitoring System</h3>
         <p>
-          This is my final year project for my Computer Engineering degree. It is a system that uses AI to detect mosquitoes and provide insights and analytics on mosquito populations. it's my most ambitious project to date because it involves building a complete end-to-end system that includes hardware, software, and AI components. Training of the model was difficult due to the lack of available datasets. I also had to optimize the model to run efficiently on edge devices, which was a challenging task. Overall, this project was a great learning experience and allowed me to apply my skills in AI, embedded systems, and software development.
+          This is my final year project for my Computer Engineering degree. It is a system that uses AI to detect mosquitoes and provide insights and analytics on mosquito populations. it&apos;s my most ambitious project to date because it involves building a complete end-to-end system that includes hardware, software, and AI components. Training of the model was difficult due to the lack of available datasets. I also had to optimize the model to run efficiently on edge devices, which was a challenging task. Overall, this project was a great learning experience and allowed me to apply my skills in AI, embedded systems, and software development.
         </p>
         <ProjectButtonGroup style={{ justifyContent: 'center' }}>
           <ProjectButton variant="code" href="https://github.com/Wizxrdx/mosquito-detection" />
