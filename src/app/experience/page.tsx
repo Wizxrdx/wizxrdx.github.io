@@ -107,7 +107,7 @@ export default function ExperiencePage() {
                 </div>
                 <div className={styles.itemBody}>
                     <ul className={styles.itemBodyList}>
-                        <li>Built a Flask-based automation platform for a charcoal packaging machine</li>
+                        <li>Built a <a href="/projects#charcoal-forecasting-app">Flask-based automation platform</a> for a charcoal packaging machine</li>
                         <li>Integrated a SARIMA forecasting model into the web app to predict daily packaging demand.</li>
                         <li>Developed a Flask-based backend to serve predictions and manage data.</li>
                         <li>Deployed the application to a Raspberry Pi for on-site use.</li>

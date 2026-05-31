@@ -34,10 +34,11 @@ export default function EducationPage() {
                     <span className={styles.itemDate}>2021 - 2025</span>
                 </div>
                 <div className={styles.itemBodyContainer}>
-                    <p className={styles.itemContent}>
-                        <strong>Relevant Coursework</strong><br/>Advanced Machine Learning and Deep Learning, Predictive Analytics using ML,
-                        Software Design, Computer Networks, Operating Systems, Data Structures and Algorithms, Database 
-                        Management System, Application Development & Automation, Mobile App Development, Quantum Computing Fundamentals and Applications.
+                    <p>
+                        <strong>Projects/Researches Worked On</strong>
+                        <br />Machine Learning Project: <a href="/projects#covid-quarantine-prediction">COVID-19 Symptom-Based Quarantine Prediction</a>
+                        <br />Deep Learning Project: <a href="/projects#exercise-posture-suggestion-system">Exercise Posture Suggestion System</a>
+                        <br />Final Year Project: <a href="/projects#mosquito-monitoring-system">AI-Powered Mosquito Monitoring System</a>
                     </p>
                     <p>
                         <strong>Organizations</strong>
