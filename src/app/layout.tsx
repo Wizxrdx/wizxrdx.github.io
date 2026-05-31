@@ -1,4 +1,3 @@
-import Script from "next/script";
 import "../shared/styles/globals.css";
 import Background from "../shared/ui/Background/Background";
 import Navbar from "../shared/layout/Navbar/Navbar";
