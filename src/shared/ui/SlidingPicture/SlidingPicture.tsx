@@ -4,9 +4,10 @@ import styles from "./SlidingPicture.module.css";
 
 type SlidingPictureProps = {
   className?: string;
+  images?: string[];
 };
 
-export default function SlidingPicture({ className }: SlidingPictureProps) {
+export default function SlidingPicture({ className, images }: SlidingPictureProps) {
   const [emblaRef] = useEmblaCarousel({ loop: true });
   const classes = [styles.root, className].filter(Boolean).join(" ");
 
@@ -14,46 +15,11 @@ export default function SlidingPicture({ className }: SlidingPictureProps) {
     <div className={classes}>
       <div className={styles.embla} ref={emblaRef}>
         <div className={styles.embla__container}>
-          <div className={styles.embla__slide}>
-            <img
-              src="https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/home_page_1.png"
-              alt="HERMES home page screenshot"
-              width={1280}
-              height={720}
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className={styles.embla__slide}>
-            <img
-              src="https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/home_page_5.png"
-              alt="HERMES home page details screenshot"
-              width={1280}
-              height={720}
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className={styles.embla__slide}>
-            <img
-              src="https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/classification_page.png"
-              alt="HERMES classification page screenshot"
-              width={1280}
-              height={720}
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className={styles.embla__slide}>
-            <img
-              src="https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/data_page.png"
-              alt="HERMES data page screenshot"
-              width={1280}
-              height={720}
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
+          {images?.map((src, index) => (
+            <div className={styles.embla__slide} key={index}>
+              <img src={src} alt={`Slide ${index + 1}`} width={1280} height={720} loading="lazy" decoding="async" />
+            </div>
+          ))}
         </div>
       </div>
     </div>

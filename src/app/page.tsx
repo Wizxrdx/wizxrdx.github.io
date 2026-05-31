@@ -69,13 +69,60 @@ export default function AboutPage() {
         <p>
           HERMES is a web application designed for the NASA Space Apps Challenge 2025, helping users classify exoplanet candidates efficiently. It allows users to upload or edit exoplanet datasets and run a machine learning model to identify confirmed planets, potential candidates, or false positives.
         </p>
-        <ProjectButtonGroup>
+        <ProjectButtonGroup style={{ justifyContent: 'center' }}>
           <ProjectButton variant="code" href="https://github.com/Wizxrdx/nasa-space-apps-2025" />
           <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=5agHeSbKPbs" />
           <ProjectButton variant="visit" href="https://dev.wizxrdx.me/nasa-space-apps-2025" />
         </ProjectButtonGroup>
-        <SlidingPicture />
+        <SlidingPicture
+          images={[
+            "https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/home_page_1.png",
+            "https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/data_page.png",
+            "https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/classification_page.png",
+            "https://raw.githubusercontent.com/Wizxrdx/nasa-space-apps-2025/refs/heads/main/assets/home_page_5.png"
+          ]}
+        />
       </Card>
+
+      <Section>
+        <Card className={styles.feature}>
+        <h2>Project that I enjoy working on</h2>
+        <h3>Smart Packaging Control & Demand Forecasting Web Application</h3>
+        <p>
+          I enjoyed working on this project as it allowed me to apply my skills in machine learning, web development and embedded systems to create a solution for smart packaging control and demand forecasting.
+        </p>
+        <ProjectButtonGroup style={{ justifyContent: 'center' }}>
+          <ProjectButton variant="code" href="https://github.com/Wizxrdx/charcoal-forecasting-app" />
+          <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=SsIo-v1et94" />
+        </ProjectButtonGroup>
+        <SlidingPicture
+          images={[
+            "https://raw.githubusercontent.com/Wizxrdx/charcoal-forecasting-app/refs/heads/main/resources/login_page.png",
+            "https://raw.githubusercontent.com/Wizxrdx/charcoal-forecasting-app/refs/heads/main/resources/dashboard.png",
+            "https://raw.githubusercontent.com/Wizxrdx/charcoal-forecasting-app/refs/heads/main/resources/analytics.png",
+          ]}
+        />
+      </Card>
+      <Card className={styles.feature}>
+        <h2>My Most Ambitious Project</h2>
+        <h3>AI-Powered Mosquito Monitoring System</h3>
+        <p>
+          This is my final year project for my Computer Engineering degree. It is a system that uses AI to detect mosquitoes and provide insights and analytics on mosquito populations. it's my most ambitious project to date because it involves building a complete end-to-end system that includes hardware, software, and AI components. Training of the model was difficult due to the lack of available datasets. I also had to optimize the model to run efficiently on edge devices, which was a challenging task. Overall, this project was a great learning experience and allowed me to apply my skills in AI, embedded systems, and software development.
+        </p>
+        <ProjectButtonGroup style={{ justifyContent: 'center' }}>
+          <ProjectButton variant="code" href="https://github.com/Wizxrdx/mosquito-detection" />
+          <ProjectButton variant="demo" href="https://www.youtube.com/watch?v=ZG2r1KPy5RM" />
+        </ProjectButtonGroup>
+        <SlidingPicture
+          images={[
+            "https://raw.githubusercontent.com/Wizxrdx/wizxrdx.github.io/refs/heads/master/public/prototype.png",
+            "https://raw.githubusercontent.com/Wizxrdx/wizxrdx.github.io/refs/heads/master/public/testing_data.png",
+            "https://raw.githubusercontent.com/Wizxrdx/wizxrdx.github.io/refs/heads/master/public/notification_data.png",
+            "https://raw.githubusercontent.com/Wizxrdx/wizxrdx.github.io/refs/heads/master/public/final_design.png",
+          ]}
+        />
+      </Card>
+      </Section>
     </div>
   );
 }
